@@ -1,4 +1,4 @@
-# Papan Informasi DIgital PT. Semen Baturaja TBK
+# Papan Informasi Digital PT. Semen Baturaja TBK
 
 ## Persyaratan
 1. Install web server seperti Apache or Nginx
@@ -29,7 +29,7 @@
         
 - Jalankan migrasi database (Atur koneksi database di .env sebelum melakukan migrasi)
 
-      php artisan migrate
+      php artisan migrate --seed
 
 - Buat symbolic link
 
