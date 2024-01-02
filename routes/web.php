@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
 
 /*
@@ -15,4 +16,6 @@ use App\Http\Controllers\BoardController;
 */
 
 Route::get("/", [BoardController::class,"index"]);
+Route::get("/login", [AuthController::class,"index"])->middleware('guest:admin')->name('login.index');
+Route::post("/login", [AuthController::class,"login"])->middleware('guest:admin')->name('login');
 
