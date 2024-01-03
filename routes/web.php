@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -22,7 +23,8 @@ Route::middleware('guest:admin')->group(function () {
     Route::get("/login", [AuthController::class,"index"])->name('login.index');
     Route::post("/login", [AuthController::class,"login"])->name('login');
 });
-Route::middleware('guest:admin')->group(function () {
+Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/dashboard-admin/profil', [ProfileController::class, 'index'])->name('profile.index');
 });
 

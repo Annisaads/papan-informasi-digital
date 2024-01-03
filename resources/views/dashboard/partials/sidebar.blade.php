@@ -28,7 +28,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="./beranda.html"
+              href="{{route('dashboard.index')}}"
               aria-expanded="false"
             >
               <span>
@@ -44,7 +44,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="./profil.html"
+              href="{{route('profile.index')}}"
               aria-expanded="false"
             >
               <span>
