@@ -80,7 +80,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="./pengumuman.html"
+              href="{{route('pengumuman.index')}}"
               aria-expanded="false"
             >
               <span>
@@ -92,7 +92,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="./pesan-tokoh.html"
+              href="{{route('pesan-tokoh.index')}}"
               aria-expanded="false"
             >
               <span>

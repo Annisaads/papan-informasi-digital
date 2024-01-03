@@ -7,6 +7,8 @@ use App\Http\Controllers\BoardController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PesanTokohController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -31,6 +33,9 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/profil', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
     Route::get('/dashboard-admin/foto', [FotoController::class, 'index'])->name('foto.index');
+    Route::get('/dashboard-admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
+    Route::get('/dashboard-admin/pesan-tokoh', [PesanTokohController::class, 'index'])->name('pesan-tokoh.index');
+
 
 });
 
