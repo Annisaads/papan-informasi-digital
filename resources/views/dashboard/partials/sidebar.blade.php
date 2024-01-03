@@ -108,7 +108,7 @@
           </li>
           <li class="sidebar-item">
             <a
-              href="./authentication-login.html"
+              href="{{route('logout')}}"
               class="btn btn-outline-primary mx-3 mt-2 d-block"
               >Keluar</a
             >
