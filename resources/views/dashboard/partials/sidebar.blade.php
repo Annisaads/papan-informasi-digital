@@ -56,7 +56,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="./video.html"
+              href="{{route('video.index')}}"
               aria-expanded="false"
             >
               <span>

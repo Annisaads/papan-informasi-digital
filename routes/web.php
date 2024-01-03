@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -27,5 +28,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get("/logout", [AuthController::class,"logout"])->name('logout');
     Route::get('/dashboard-admin', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard-admin/profil', [ProfileController::class, 'index'])->name('profile.index');
+    Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
+
 });
 
