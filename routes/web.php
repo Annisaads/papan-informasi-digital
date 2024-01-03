@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
+use App\Http\Controllers\DashboardController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,11 @@ use App\Http\Controllers\BoardController;
 */
 
 Route::get("/", [BoardController::class,"index"]);
-Route::get("/login", [AuthController::class,"index"])->middleware('guest:admin')->name('login.index');
-Route::post("/login", [AuthController::class,"login"])->middleware('guest:admin')->name('login');
+Route::middleware('guest:admin')->group(function () {
+    Route::get("/login", [AuthController::class,"index"])->name('login.index');
+    Route::post("/login", [AuthController::class,"login"])->name('login');
+});
+Route::middleware('guest:admin')->group(function () {
+    Route::get('/dashboard-admin', [DashboardController::class, 'index'])->name('dashboard.index');
+});
 
