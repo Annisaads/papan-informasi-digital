@@ -49,6 +49,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
                                         <h6 class="fw-semibold mb-0">PT Semen Baturaja (Persero) didirikan pada 14 November
@@ -78,6 +86,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Alamat Web</h6>
                                         <h6 class="fw-semibold mb-0">semenbaturaja.co.id</h6>
@@ -94,6 +110,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nomor Telepon</h6>
                                         <h6 class="fw-semibold mb-0">(62)-711-511261</h6>
@@ -105,6 +129,14 @@
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
                                     </div>

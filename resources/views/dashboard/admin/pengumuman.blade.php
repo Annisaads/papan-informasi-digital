@@ -29,6 +29,9 @@
                                     <h6 class="fw-semibold mb-0"></h6>
                                 </th>
                                 <th class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0"></h6>
+                                </th>
+                                <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Tanggal</h6>
                                 </th>
                                 <th class="border-bottom-0">
@@ -47,20 +50,9 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
-                                        exercitation</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
                                     </div>
@@ -85,20 +77,9 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
-                                        exercitation</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
                                     </div>
@@ -123,20 +104,9 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
-                                        exercitation</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
                                     </div>
@@ -156,6 +126,95 @@
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <p class="mb-0 fw-normal">04/01/2024</p>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do
+                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
+                                        exercitation</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <p class="mb-0 fw-normal">04/01/2024</p>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do
+                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
+                                        exercitation</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <p class="mb-0 fw-normal">04/01/2024</p>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do
+                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
+                                        exercitation</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
                                     </div>
