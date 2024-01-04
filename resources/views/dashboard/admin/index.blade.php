@@ -8,12 +8,15 @@
     <!--  Cuaca -->
     <div class="card w-100">
         <div class="card-body">
-            <iframe id="tradingview-widget" src="https://cuacalab.id/cuaca_palembang/" class="tradingview-widget"
-                frameborder="0" allowtransparency="true" scrolling="no" style="width: 100%; height:330px">
+            <div id="weather-container">
+            </div>
+            <iframe id="tradingview-widget"
+                src="https://embed.windy.com/embed2.html?lat=-3.332&lon=104.700&detailLat=-3.209&detailLon=104.700&width=600&height=450&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=%C2%B0C&radarRange=-1" width="600"
+                class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
+                style="width: 100%; height:330px">
             </iframe>
         </div>
     </div>
-
     <div class="row">
         <div class="col-lg-4">
             <div class="row">
