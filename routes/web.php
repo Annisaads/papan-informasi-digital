@@ -35,7 +35,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/foto', [FotoController::class, 'index'])->name('foto.index');
     Route::get('/dashboard-admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
     Route::get('/dashboard-admin/pesan-tokoh', [PesanTokohController::class, 'index'])->name('pesan-tokoh.index');
-
+    Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
 
 });
 

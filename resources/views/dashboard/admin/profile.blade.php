@@ -7,24 +7,30 @@
                 <h5 class="card-title fw-semibold mb-4">Input Profil Perusahaan</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('success') }}
+                            </div>
+                        @endif
+                        <form action="{{ route('profile.create') }}" method="POST">
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Deskripsi Singkat</label>
-                                <textarea type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan deskripsi" rows="5"></textarea>
+                                <textarea type="text" name="description" id="disabledTextInput" class="form-control" placeholder="Tambahkan deskripsi" rows="5"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Alamat Web</label>
-                                <input type="url" id="disabledTextInput" class="form-control"
+                                <input type="text" name="website_url" id="disabledTextInput" class="form-control"
                                     placeholder="Tambahkan url website"></input>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Nomor Telepon</label>
-                                <input type="text" id="disabledTextInput" class="form-control"
+                                <input type="text" name="phone_number" id="disabledTextInput" class="form-control"
                                     placeholder="Tambahkan nomor telepon"></input>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Media Sosial</label>
-                                <input type="text" id="disabledTextInput" class="form-control"
+                                <input type="text" name="social_media" id="disabledTextInput" class="form-control"
                                     placeholder="Tambahkan media sosial"></input>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
