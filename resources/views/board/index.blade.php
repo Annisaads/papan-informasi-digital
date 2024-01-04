@@ -124,22 +124,23 @@
                         <div class="div-42">
                             <div class="div-43">Profil Perusahaan</div>
                             <div class="div-44">
-                                PT Semen Baturaja (Persero) didirikan pada 14 November 1974
-                                dengan saham awal 45% dimiliki oleh PT Semen Gresik dan PT
-                                Semen Padang. Pada 1979, SMBR menjadi Persero dengan saham 88%
-                                milik Pemerintah RI. Pada 1991, saham diambil alih penuh oleh
-                                Pemerintah. Pada 14 Maret 2013, SMBR menjadi PT Semen Baturaja
-                                Tbk. Akhir 2022, SMBR diintegrasikan ke PT Semen Indonesia Tbk
-                                (SIG) sebagai bagian dari pembentukan holding BUMN Sub klaster
-                                semen. Pada 19 Desember 2022, saham SMBR dialihkan kepada PT
-                                Semen Indonesia Tbk, sehingga status saat ini SMBR berubah
-                                menjadi Non-Persero menjadi PT Semen Baturaja Tbk.
+                                @if ($profile)
+                                    {{ $profile->description }}
+                                @endif
                             </div>
 
                             <div class="div-45">
                                 <div class="div-46">
-                                    <div class="div-47">semenbaturaja.co.id</div>
-                                    <div class="div-48">Contact (62)-711-511261</div>
+                                    <div class="div-47">
+                                        @if ($profile)
+                                            {{ $profile->website_url }}
+                                        @endif
+                                    </div>
+                                    <div class="div-48">
+                                        @if ($profile)
+                                            {{ $profile->phone_number }}
+                                        @endif
+                                    </div>
                                 </div>
                                 <div class="div-49">
                                     <div class="div-50">
@@ -148,7 +149,11 @@
                                         <img loading="lazy" srcset="{{ asset('img/logo-x.png') }}" class="img-7" />
                                         <img loading="lazy" srcset="{{ asset('img/logo-ytb.png') }}" class="img-8" />
                                     </div>
-                                    <div class="div-51">pt.semenbaturaja</div>
+                                    <div class="div-51">
+                                        @if ($profile)
+                                            {{ $profile->social_media }}
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,8 +161,7 @@
                         <div class="div-52">
                             <iframe id="tradingview-widget"
                                 src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=id#%7B%22symbol%22%3A%22IDX%3ASMBR%22%2C%22frameElementId%22%3A%22tradingview_adbaa%22%2C%22interval%22%3A%22D%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22semenbaturaja.co.id%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22IDX%3ASMBR%22%2C%22page-uri%22%3A%22semenbaturaja.co.id%2Finvestor-informasi-saham-obligasi%2F%23top%22%7D"
-                                class="tradingview-widget" frameborder="0" allowtransparency="true"
-                                scrolling="no"
+                                class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
                                 styel= "width": 100%; height="234px"></iframe>
                         </div>
 

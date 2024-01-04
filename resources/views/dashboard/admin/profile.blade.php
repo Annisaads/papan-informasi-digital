@@ -16,7 +16,8 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Deskripsi Singkat</label>
-                                <textarea type="text" name="description" id="disabledTextInput" class="form-control" placeholder="Tambahkan deskripsi" rows="5"></textarea>
+                                <textarea type="text" name="description" id="disabledTextInput" class="form-control"
+                                    placeholder="Tambahkan deskripsi" rows="5"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Alamat Web</label>
@@ -65,20 +66,11 @@
                                 <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
-                                        <h6 class="fw-semibold mb-0">PT Semen Baturaja (Persero) didirikan pada 14 November
-                                            1974
-                                            dengan saham awal 45% dimiliki oleh PT Semen Gresik dan PT Semen Padang. Pada
-                                            1979, SMBR
-                                            menjadi Persero dengan saham 88% milik Pemerintah RI. Pada 1991, saham diambil
-                                            alih
-                                            penuh oleh Pemerintah. Pada 14 Maret 2013, SMBR menjadi PT Semen Baturaja Tbk.
-                                            Akhir
-                                            2022, SMBR diintegrasikan ke PT Semen Indonesia Tbk (SIG) sebagai bagian dari
-                                            pembentukan holding BUMN Sub klaster semen. Pada 19 Desember 2022, saham SMBR
-                                            dialihkan
-                                            kepada PT Semen Indonesia Tbk, sehingga status saat ini SMBR berubah menjadi
-                                            Non-Persero
-                                            menjadi PT Semen Baturaja Tbk.</h6>
+                                        <h6 class="fw-semibold mb-0">
+                                            @if ($profile)
+                                                {{ $profile->description }}
+                                            @endif
+                                        </h6>
                                     </div>
                                 </td>
                             </tr>
@@ -102,7 +94,11 @@
                                 <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Alamat Web</h6>
-                                        <h6 class="fw-semibold mb-0">semenbaturaja.co.id</h6>
+                                        <h6 class="fw-semibold mb-0">
+                                            @if ($profile)
+                                                {{ $profile->website_url }}
+                                            @endif
+                                        </h6>
                                     </div>
                                 </td>
                             </tr>
@@ -126,7 +122,11 @@
                                 <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nomor Telepon</h6>
-                                        <h6 class="fw-semibold mb-0">(62)-711-511261</h6>
+                                        <h6 class="fw-semibold mb-0">
+                                            @if ($profile)
+                                                {{ $profile->phone_number }}
+                                            @endif
+                                        </h6>
                                     </div>
                                 </td>
                             </tr>
@@ -150,7 +150,11 @@
                                 <td class="border-bottom-0">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Media Sosial</h6>
-                                        <h6 class="fw-semibold mb-0">pt.semenbaturaja</h6>
+                                        <h6 class="fw-semibold mb-0">
+                                            @if ($profile)
+                                                {{ $profile->social_media }}
+                                            @endif
+                                        </h6>
                                     </div>
                                 </td>
                             </tr>

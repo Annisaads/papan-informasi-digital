@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function index(){
-        return view("dashboard.admin.profile");
+        $profile = Profile::first();
+        return view("dashboard.admin.profile", compact("profile"));
     }
 
     public function create(Request $request){
