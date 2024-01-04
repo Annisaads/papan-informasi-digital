@@ -1,518 +1,105 @@
 @extends('dashboard.layouts.app')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-8 d-flex align-items-stretch">
-      <div class="card w-100">
-        <div class="card-body p-4">
-          <h5 class="card-title fw-semibold mb-4">Pengumuman</h5>
-          <div class="table-responsive" style="max-height: 385px;">
-            <table class="table text-nowrap mb-0 align-middle">
-              <thead class="text-dark fs-4">
-                <tr>
-                  <th class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0"></h6>
-                  </th>
-                  <th class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Tanggal</h6>
-                  </th>
-                  <th class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Isi</h6>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="border-bottom-0">
-                    <div class="d-flex align-items-center gap-2">
-                      <button style="background-color: #ffff;border: none;">
-                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                      </button>
-                    </div>
-                  </td>
-                  <td class="border-bottom-0">
-                    <p class="mb-0 fw-normal">04/01/2024</p>
-                  </td>
-                  <td class="border-bottom-0">
-                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation</h6>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="row">
-        <div class="col-lg-12">
-          <!-- Video -->
-          <div class="card overflow-hidden">
-            <div class="card-body p-4">
-              <h5 class="card-title mb-9 fw-semibold">Video</h5>
-              <div class="table-responsive">
-                <table class="table text-nowrap mb-0 align-middle">
-                  <thead class="text-dark fs-4">
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">video-singkat.MP4</h6>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+    <!--  Cuaca -->
+    <div class="row">
+        <div class="col-lg-8 d-flex align-items-strech">
+            <div class="card w-100">
+                <div class="card-body">
+
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-lg-12">
-          <!-- Foto -->
-          <div class="card overflow-hidden">
-            <div class="card-body p-4">
-              <h5 class="card-title mb-9 fw-semibold">Foto</h5>
-              <div class="table-responsive" style="max-height: 215px;">
-                <table class="table text-nowrap mb-0 align-middle">
-                  <thead class="text-dark fs-4">
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Pengumuman -->
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">
+                            Pengumuman
+                        </h5>
+                        <div class="card">
+                            <div class="card-header">
+                                Jumlah Pengumuman
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" style="color: #5d87ff; text-align:center;">7</h3>
+                            </div>
                         </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto1.jpg</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto2.jpg</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto3.jpg</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto4.jpg</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto5.jpg</h6>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="border-bottom-0">
-                        <div class="d-flex align-items-center gap-2">
-                          <button style="background-color: #ffff;border: none;">
-                            <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                          </button>
-                        </div>
-                      </td>
-                      <td class="border-bottom-0">
-                        <h6 class="fw-semibold mb-0">foto6.jpg</h6>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <div class="row">
-      <div class="col-lg-4 d-flex align-items-stretch">
-        <div class="card w-100">
-          <div class="card-body p-4">
-            <div class="mb-4">
-              <h5 class="card-title fw-semibold">Profil</h5>
+        <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card-body p-4">
+                <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">
+                    Pesan Tokoh
+                </h5>
+                <div class="card">
+                    <div class="card-header">
+                        Jumlah Pesan Tokoh
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #5d87ff; text-align:center">7</h3>
+                    </div>
+                </div>
             </div>
-            <div class="table-responsive">
-              <table class="table text-nowrap mb-0 align-middle">
-                <thead class="text-dark fs-4">
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <div>
-                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
-                        <h6 class="fw-semibold mb-0">PT Semen Baturaja (Persero) didirikan pada 14 November 1974
-                          dengan saham awal 45% dimiliki oleh PT Semen Gresik dan PT Semen Padang. Pada 1979, SMBR
-                          menjadi Persero dengan saham 88% milik Pemerintah RI. Pada 1991, saham diambil alih
-                          penuh oleh Pemerintah. Pada 14 Maret 2013, SMBR menjadi PT Semen Baturaja Tbk. Akhir
-                          2022, SMBR diintegrasikan ke PT Semen Indonesia Tbk (SIG) sebagai bagian dari
-                          pembentukan holding BUMN Sub klaster semen. Pada 19 Desember 2022, saham SMBR dialihkan
-                          kepada PT Semen Indonesia Tbk, sehingga status saat ini SMBR berubah menjadi Non-Persero
-                          menjadi PT Semen Baturaja Tbk.</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <div>
-                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Url Website</h6>
-                        <h6 class="fw-semibold mb-0">semenbaturaja.co.id</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <div>
-                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nomor Telepon</h6>
-                        <h6 class="fw-semibold mb-0">(62)-711-511261</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <div>
-                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Media Sosial</h6>
-                        <h6 class="fw-semibold mb-0">pt.semenbaturaja</h6>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col-lg-8 d-flex align-items-stretch">
-        <div class="card w-100">
-          <div class="card-body p-4">
-            <h5 class="card-title fw-semibold mb-4">Pesan Tokoh</h5>
-            <div class="table-responsive" style="max-height: 285px;">
-              <table class="table text-nowrap mb-0 align-middle">
-                <thead class="text-dark fs-4">
-                  <tr>
-                    <th class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0"></h6>
-                    </th>
-                    <th class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nama</h6>
-                    </th>
-                    <th class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Jabatan</h6>
-                    </th>
-                    <th class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Pesan</h6>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Yang Jungwon</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Enhypen</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Annisa Jamal</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Staf</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Bau apa yang romantis??? AMISyuu hehehehehehe kamu ga kangen
-                        aku???</h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Angel</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Figuran</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Putri A</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Cedit cewe adit</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Jakik</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Pengcarry Puh</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Mas Boy</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Ketua Himpunan Gym L1</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="border-bottom-0">
-                      <div class="d-flex align-items-center gap-2">
-                        <button style="background-color: #ffff;border: none;">
-                          <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
-                        </button>
-                      </div>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Sandhika Galih</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <p class="mb-0 fw-normal">Kaka Mentor</p>
-                    </td>
-                    <td class="border-bottom-0">
-                      <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                      </h6>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="card w-100">
+                <div class="card-body p-4">
+                    <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">Grafik Saham</h5>
+                    <div>
+                        <iframe id="tradingview-widget"
+                            src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=id#%7B%22symbol%22%3A%22IDX%3ASMBR%22%2C%22frameElementId%22%3A%22tradingview_adbaa%22%2C%22interval%22%3A%22D%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22semenbaturaja.co.id%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22IDX%3ASMBR%22%2C%22page-uri%22%3A%22semenbaturaja.co.id%2Finvestor-informasi-saham-obligasi%2F%23top%22%7D"
+                            class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no">
+                        </iframe>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-sm-6 col-xl-3" style="width: 33%;">
+            <div class="card overflow-hidden rounded-2">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Profil</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jumlah Profil</h6>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #5d87ff; text-align:center;">7</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3" style="width: 33%;">
+            <div class="card overflow-hidden rounded-2">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Video</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jumlah Video</h6>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #5d87ff; text-align:center;">7</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3" style="width: 33%;">
+            <div class="card overflow-hidden rounded-2">
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Foto</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Jumlah Foto</h6>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: #5d87ff; text-align:center;">7</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-6 px-6 text-center">
+        <p class="mb-0 fs-4">
+            Copyright by PT Semen Baturaja Tbk
+        </p>
+    </div>
 @endsection
