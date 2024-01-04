@@ -79,7 +79,7 @@
                                 </td>
                                 <td class="border-bottom-0">
                                     <div>
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Url Website</h6>
+                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Alamat Web</h6>
                                         <h6 class="fw-semibold mb-0">semenbaturaja.co.id</h6>
                                     </div>
                                 </td>
