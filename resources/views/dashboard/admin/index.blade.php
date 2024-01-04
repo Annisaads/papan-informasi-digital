@@ -1,12 +1,12 @@
 @extends('dashboard.layouts.app')
 
 @section('content')
-    <h3 class="mb-0 fw-semibold p-1" style="color: #5d87ff;">Selamat datang kembali, Admin!</h3>
+    <h3 class="mb-0 pt-4 fw-semibold p-1" style="color: #5d87ff;">Selamat datang kembali, Admin!</h3>
     <p class="pb-4 fw-normal p-1">Perbarui papan informasi digital PT Semen Baturaja Tbk setiap hari :D
     </p>
 
     <!--  Cuaca -->
-    <div class="card w-100" style="background-color: #5d87ff">
+    <div class="card w-100">
         <div class="card-body">
             <iframe id="tradingview-widget" src="https://cuacalab.id/cuaca_palembang/" class="tradingview-widget"
                 frameborder="0" allowtransparency="true" scrolling="no" style="width: 100%; height:330px">
@@ -20,9 +20,8 @@
                 <div class="col-lg-12">
                     <!-- Pengumuman -->
                     <div class="card-body p-2">
-                        <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">
-                            Pengumuman
-                        </h5>
+                        <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
+                                href="{{ route('pengumuman.index') }}">Pengumuman</a></h5>
                         <div class="card">
                             <div class="card-header">
                                 Jumlah Pengumuman
@@ -36,9 +35,8 @@
                 <div class="col-lg-12">
                     <!-- Pesan Tokoh -->
                     <div class="card-body p-2">
-                        <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">
-                            Pesan Tokoh
-                        </h5>
+                        <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
+                                href="{{ route('pesan-tokoh.index') }}">Pesan Tokoh</a></h5>
                         <div class="card">
                             <div class="card-header">
                                 Jumlah Pesan Tokoh
@@ -69,9 +67,10 @@
     </div>
     <div class="row">
         <div class="col-sm-6 col-xl-3" style="width: 33%;">
-            <div class="card overflow-hidden rounded-2">
+            <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
-                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Profil</h5>
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;"><a
+                            href="{{ route('profile.index') }}">Profil</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Profil</h6>
                     <div class="card-body">
                         <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
@@ -80,9 +79,10 @@
             </div>
         </div>
         <div class="col-sm-6 col-xl-3" style="width: 33%;">
-            <div class="card overflow-hidden rounded-2">
+            <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
-                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Video</h5>
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;"><a
+                            href="{{ route('video.index') }}">Video</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Video</h6>
                     <div class="card-body">
                         <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
@@ -91,9 +91,10 @@
             </div>
         </div>
         <div class="col-sm-6 col-xl-3" style="width: 33%;">
-            <div class="card overflow-hidden rounded-2">
+            <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
-                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">Foto</h5>
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;"><a href="{{ route('foto.index') }}">Foto</a>
+                    </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Foto</h6>
                     <div class="card-body">
                         <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>

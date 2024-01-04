@@ -1,40 +1,21 @@
-<header class="app-header">
+<header class="app-header" style=" border-style: groove; border-width: 0px 0px 3px 0px; border-color: #5d87ff;">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a>
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <span>Menu /&nbsp</span>
-                  </li>
-                  <li class="nav-item">
-                      <h5> Beranda</h5>
-                  </li>
-              </ul>
+        <div class="my-1">
+            <h5 class="mb-1 fw-semibold mt-1">Padimen</h5>
+            <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Papan Informasi Digital PT Semen Baturaja Tbk
+            </p>
+        </div>
+
+        <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                <li class="nav-item">
+                    <a>
+                        <div class="alert alert-info my-auto py-1" style="height: 31px; color: #000">
+                            Kamis, 04 Januari 2024
+                        </div>
+                    </a>
+                </li>
             </ul>
-          </a>
-        </li>
-      </ul>
-      <div
-        class="navbar-collapse justify-content-end px-0"
-        id="navbarNav"
-      >
-        <ul
-          class="navbar-nav flex-row ms-auto align-items-center justify-content-end"
-        >
-          <li class="nav-item">
-            <a>
-              <div class="mb-3" style="width: 250px; margin-top: 16px;">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="searchButton"
-                  placeholder="Cari"
-                />
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+        </div>
     </nav>
-  </header>
+</header>
