@@ -63,7 +63,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border-bottom-0" style="width: 10%;">
+                                <td class="border-bottom-0" style="width: 5%;">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;"
                                             data-bs-target="#descriptionModal" data-bs-toggle="modal">
@@ -72,7 +72,7 @@
                                         </button>
                                     </div>
                                 </td>
-                                <td class="border-bottom-0" style="width: 90%;">
+                                <td class="border-bottom-0" style="width: 95%;">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
                                         <h6 class="fw-semibold mb-0">
@@ -151,9 +151,8 @@
                     </table>
                 </div>
                 <a href="{{ route('profile.delete.description') }}">
-                    <button type="button" class="btn btn-outline-danger mt-3">Hapus</button>
+                    <button type="button" class="btn btn-danger mt-3">Hapus</button>
                 </a>
-
             </div>
         </div>
     </div>

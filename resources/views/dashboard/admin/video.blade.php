@@ -23,7 +23,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border-bottom-0">
+                                <td class="border-bottom-0" style="width: 5%;">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/trash.png" width="20"
@@ -31,7 +31,7 @@
                                         </button>
                                     </div>
                                 </td>
-                                <td class="border-bottom-0">
+                                <td class="border-bottom-0" style="width: 95%;">
                                     <h6 class="fw-semibold mb-0">video-singkat.MP4</h6>
                                 </td>
                             </tr>
