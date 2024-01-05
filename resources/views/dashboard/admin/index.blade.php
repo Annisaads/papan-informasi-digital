@@ -9,11 +9,10 @@
     <div class="card w-100">
         <div class="card-body">
             <div id="weather-container">
-                <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;">Cuaca Hari Ini</h5>
             </div>
             <iframe id="tradingview-widget"
-                src="https://embed.windy.com/embed2.html?lat=-3.332&lon=104.700&detailLat=-3.209&detailLon=104.700&width=600&height=450&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=%C2%B0C&radarRange=-1"
-                width="600" class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
+                src="https://embed.windy.com/embed2.html?lat=-3.332&lon=104.700&detailLat=-3.209&detailLon=104.700&width=600&height=450&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=%C2%B0C&radarRange=-1" width="600"
+                class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
                 style="width: 100%; height:330px">
             </iframe>
         </div>
@@ -73,11 +72,12 @@
         <div class="col-sm-6 col-xl-3" style="width: 33%;">
             <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
-                    <h5 class="card-title fw-semibold" style="color: #5d87ff;"><a
-                            href="{{ route('profile.index') }}">Profil</a></h5>
+                    <h5 class="card-title fw-semibold" style="color: #5d87ff;">
+                        <a href="{{ route('profile.index') }}">Profil</a>
+                    </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Profil</h6>
                     <div class="card-body">
-                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
+                       <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahProfil }}</h3>
                     </div>
                 </div>
             </div>

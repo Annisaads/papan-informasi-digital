@@ -35,7 +35,7 @@ class ProfileController extends Controller
         ]);
         return redirect()->route('profile.index')->with('delete-success','Profil berhasil dihapus');
     }
-    
+
     public function updateDescription(Request $request){
         $profile = Profile::first();
         $profile->update([
