@@ -124,22 +124,23 @@
                         <div class="div-42">
                             <div class="div-43">Profil Perusahaan</div>
                             <div class="div-44">
-                                PT Semen Baturaja (Persero) didirikan pada 14 November 1974
-                                dengan saham awal 45% dimiliki oleh PT Semen Gresik dan PT
-                                Semen Padang. Pada 1979, SMBR menjadi Persero dengan saham 88%
-                                milik Pemerintah RI. Pada 1991, saham diambil alih penuh oleh
-                                Pemerintah. Pada 14 Maret 2013, SMBR menjadi PT Semen Baturaja
-                                Tbk. Akhir 2022, SMBR diintegrasikan ke PT Semen Indonesia Tbk
-                                (SIG) sebagai bagian dari pembentukan holding BUMN Sub klaster
-                                semen. Pada 19 Desember 2022, saham SMBR dialihkan kepada PT
-                                Semen Indonesia Tbk, sehingga status saat ini SMBR berubah
-                                menjadi Non-Persero menjadi PT Semen Baturaja Tbk.
+                                @if ($profile)
+                                    {{ $profile->description }}
+                                @endif
                             </div>
 
                             <div class="div-45">
                                 <div class="div-46">
-                                    <div class="div-47">semenbaturaja.co.id</div>
-                                    <div class="div-48">Contact (62)-711-511261</div>
+                                    <div class="div-47">
+                                        @if ($profile)
+                                            {{ $profile->website_url }}
+                                        @endif
+                                    </div>
+                                    <div class="div-48">
+                                        @if ($profile)
+                                            {{ $profile->phone_number }}
+                                        @endif
+                                    </div>
                                 </div>
                                 <div class="div-49">
                                     <div class="div-50">
@@ -148,7 +149,11 @@
                                         <img loading="lazy" srcset="{{ asset('img/logo-x.png') }}" class="img-7" />
                                         <img loading="lazy" srcset="{{ asset('img/logo-ytb.png') }}" class="img-8" />
                                     </div>
-                                    <div class="div-51">pt.semenbaturaja</div>
+                                    <div class="div-51">
+                                        @if ($profile)
+                                            {{ $profile->social_media }}
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
