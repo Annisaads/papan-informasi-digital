@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="shortcut icon" type="image/png" href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
     <title>Papan Informasi Digital PT Semen Baturaja Tbk</title>
+
+
 </head>
 
 <body>
@@ -103,16 +105,13 @@
                                         </div>
                                     </div>
                                     <div class="div-40">
-                                        Dalam menghadapi persaingan industri semen nasional yang
-                                        semakin kompetitif dan upaya untuk menciptakan pertumbuhan
-                                        kinerja yang berkelanjutan, Perseroan telah merumuskan
-                                        berbagai kebijakan dan inisiatif strategis yang tengah
-                                        dijalankan tentunya dengan tetap mematuhi regulasi yang
-                                        berlaku serta memperhatikan aspek risiko yang mungkin akan
-                                        timbul. Pokok penting kebijakan dan inisiatif strategis
-                                        Perseroan berfokus pada Market Share Expansion Through
-                                        Industrial Synergy, Cost Leadership Through SMBRGO45
-                                        Program dan Competency Improvement of Employee.
+                                        Dalam menghadapi persaingan industri semen nasional yang semakin kompetitif dan
+                                        upaya untuk menciptakan pertumbuhan kinerja yang berkelanjutan, Perseroan telah
+                                        merumuskan berbagai kebijakan dan inisiatif strategis yang tengah dijalankan
+                                        tentunya dengan tetap mematuhi regulasi yang berlaku serta memperhatikan aspek
+                                        risiko yang mungkin akan timbul. Pokok penting kebijakan dan inisiatif strategis
+                                        Perseroan berfokus pada Market Share Expansion Through Industrial Synergy, Cost
+                                        Leadership Through SMBRGO45 Program dan Competency Improvement of Employee.
                                     </div>
                                 </div>
                             </div>
