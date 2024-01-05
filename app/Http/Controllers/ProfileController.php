@@ -25,34 +25,17 @@ class ProfileController extends Controller
         Profile::create($data);
         return redirect()->route('profile.index')->with('success','Data berhasil disimpan');
     }
-    public function deleteDescription(){
+    public function deleteProfile(){
         $profile = Profile::first();
         $profile->update([
-            'description'=> null
-        ]);
-        return redirect()->route('profile.index')->with('delete-success','Deskripsi berhasil dihapus');
-    }
-    public function deleteWebsiteUrl(){
-        $profile = Profile::first();
-        $profile->update([
-            'website_url'=> null
-        ]);
-        return redirect()->route('profile.index')->with('delete-success','Alamat web berhasil dihapus');
-    }
-    public function deletePhoneNumber(){
-        $profile = Profile::first();
-        $profile->update([
-            'phone_number'=> null
-        ]);
-        return redirect()->route('profile.index')->with('delete-success','Nomor telepon berhasil dihapus');
-    }
-    public function deleteSocialMedia(){
-        $profile = Profile::first();
-        $profile->update([
+            'description'=> null,
+            'website_url'=> null,
+            'phone_number'=> null,
             'social_media'=> null
         ]);
-        return redirect()->route('profile.index')->with('delete-success','Sosial media berhasil dihapus');
+        return redirect()->route('profile.index')->with('delete-success','Profil berhasil dihapus');
     }
+    
     public function updateDescription(Request $request){
         $profile = Profile::first();
         $profile->update([

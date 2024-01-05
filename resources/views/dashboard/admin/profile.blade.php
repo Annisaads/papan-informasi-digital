@@ -150,7 +150,7 @@
                         </tbody>
                     </table>
                 </div>
-                <a href="{{ route('profile.delete.description') }}">
+                <a href="{{ route('profile.delete.profile') }}">
                     <button type="button" class="btn btn-danger mt-3">Hapus</button>
                 </a>
             </div>

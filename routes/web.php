@@ -36,10 +36,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
     Route::get('/dashboard-admin/pesan-tokoh', [PesanTokohController::class, 'index'])->name('pesan-tokoh.index');
     Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
-    Route::get('/dashboard-admin/profil/hapus-deskripsi', [ProfileController::class,'deleteDescription'])->name('profile.delete.description');
-    Route::get('/dashboard-admin/profil/hapus-alamat-web', [ProfileController::class,'deleteWebsiteUrl'])->name('profile.delete.website_url');
-    Route::get('/dashboard-admin/profil/hapus-nomor-telepon', [ProfileController::class,'deletePhoneNumber'])->name('profile.delete.phone_number');
-    Route::get('/dashboard-admin/profil/hapus-sosial-media', [ProfileController::class,'deleteSocialMedia'])->name('profile.delete.social_media');
+    Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
     Route::post('/dashboard-admin/profil/edit-deskripsi', [ProfileController::class,'updateDescription'])->name('profile.update.description');
     Route::post('/dashboard-admin/profil/edit-alamat-web', [ProfileController::class,'updateWebsiteUrl'])->name('profile.update.website_url');
     Route::post('/dashboard-admin/profil/edit-nomor-telepon', [ProfileController::class,'updatePhoneNumber'])->name('profile.update.phone_number');
