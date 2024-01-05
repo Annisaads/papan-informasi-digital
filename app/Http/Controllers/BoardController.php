@@ -11,4 +11,5 @@ class BoardController extends Controller
         $profile = Profile::first();
         return view('board.index', compact('profile'));
     }
+    
 }

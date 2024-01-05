@@ -796,3 +796,18 @@ isi
   margin: auto 0;
   font: 400 14px "Open Sans", sans-serif;
 }
+
+.jam {
+    font-weight: 700;
+    color: rgba(0, 73, 28, 1);
+}
+
+.jam-separator {
+    font-weight: 700;
+    color: rgba(159, 16, 20, 1);
+}
+
+.tanggal {
+    font-weight: 700;
+    color: rgba(0, 73, 28, 1);
+}

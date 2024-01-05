@@ -167,33 +167,112 @@
                                 styel= "width": 100%; height="234px"></iframe>
                         </div>
 
+                        <head>
+                            <script>
+                                function tampilkanTanggal() {
+                                    var sekarang = new Date();
+                                    var options = {
+                                        weekday: 'long',
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    };
+                                    var tanggalString = sekarang.toLocaleDateString('id-ID', options);
+                                    document.getElementById('tanggal').innerHTML = tanggalString;
+                                }
 
-                        <div class="div-59">
-                            <div class="div-60">
-                                <img loading="lazy" srcset="{{ asset('img/logo-cuaca.png') }}" class="img-10" />
-                                <div class="div-61">
-                                    <div class="div-62">30°C</div>
-                                    <div class="div-63">Berawan</div>
+                                function tampilkanJam() {
+                                    var sekarang = new Date();
+                                    var jam = sekarang.getHours();
+                                    var menit = sekarang.getMinutes();
+                                    var detik = sekarang.getSeconds();
+
+                                    jam = padZero(jam);
+                                    menit = padZero(menit);
+                                    detik = padZero(detik);
+
+                                    var jamString = jam + " : " + menit;
+                                    var detikString = " : " + detik;
+
+                                    document.getElementById('jam').innerHTML = jamString;
+                                    document.getElementById('detik').innerHTML = detikString;
+
+                                    setTimeout(tampilkanJam, 1000); // Perbarui setiap 1 detik
+                                }
+
+                                function padZero(number) {
+                                    return number < 10 ? "0" + number : number;
+                                }
+
+                                function tampilkanCuaca() {
+                                    const apiKey = 'b925f92dc59ed1b1f9c298b10c79bc7f';
+                                    const city = 'PALEMBANG';
+
+                                    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+                                    fetch(apiUrl)
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            const temperature = data.main.temp;
+                                            const weatherDescription = data.weather[0].description;
+
+                                            document.getElementById('temperature').innerHTML = temperature + "°C";
+                                            document.getElementById('weather-description').innerHTML = weatherDescription;
+
+                                            sesuaikanGambarCuaca(temperature, weatherDescription);
+                                        })
+                                        .catch(error => console.error('Error fetching weather data:', error));
+                                }
+
+                                function sesuaikanGambarCuaca(temperature, weatherDescription) {
+                                    let cuacaImgSrc = '';
+
+                                    if (weatherDescription.includes('rain')) {
+                                        cuacaImgSrc = "{{ asset('img/hujan.png') }}";
+                                    } else if (weatherDescription.includes('cloud')) {
+                                        cuacaImgSrc = "{{ asset('img/berawan.png') }}";
+                                    } else if (weatherDescription.includes('clear')) {
+                                        cuacaImgSrc = "{{ asset('img/cerah.png') }}";
+                                    } else {
+                                        cuacaImgSrc = "{{ asset('img/normal.png') }}";
+                                    }
+
+                                    const cuacaImg = document.getElementById('cuaca-img');
+                                    cuacaImg.src = cuacaImgSrc;
+                                    cuacaImg.classList.add('img-10');
+                                }
+
+                                window.onload = function() {
+                                    tampilkanTanggal();
+                                    tampilkanJam();
+                                    tampilkanCuaca();
+                                };
+                            </script>
+                        </head>
+
+                        <body>
+                            <div class="div-59">
+                                <div class="div-60">
+                                    <img id="cuaca-img" class="cuaca-img" class="img-10" />
+                                    <div class="div-61">
+                                        <div id="temperature" class="div-62"></div>
+                                        <div id="weather-description" class="div-63"></div>
+                                    </div>
+                                </div>
+                                <div class="div-64" id="tanggal"></div>
+                                <div class="div-65">
+                                    <span class="jam" id="jam"></span>
+                                    <span class="jam-separator"></span>
+                                    <span class="jam" id="detik" style="color: rgba(159, 16, 20, 1)"></span>
                                 </div>
                             </div>
-                            <div class="div-64">
-                                Selasa,
-                                <br />
-                                02 Januari 2024
-                            </div>
-                            <div class="div-65">
-                                <span style="font-weight: 700; color: rgba(0, 73, 28, 1)">
-                                    13 : 08
-                                </span>
-                                <span style="font-weight: 700; color: rgba(159, 16, 20, 1)">
-                                    : 18
-                                </span>
-                            </div>
-                        </div>
+                        </body>
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

@@ -82,6 +82,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-sm-6 col-xl-3" style="width: 33%;">
             <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
