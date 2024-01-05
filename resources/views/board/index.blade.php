@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
     <title>Papan Informasi Digital PT Semen Baturaja Tbk</title>
 </head>
 
@@ -137,6 +138,7 @@
                                         @endif
                                     </div>
                                     <div class="div-48">
+                                        Contact
                                         @if ($profile)
                                             {{ $profile->phone_number }}
                                         @endif
