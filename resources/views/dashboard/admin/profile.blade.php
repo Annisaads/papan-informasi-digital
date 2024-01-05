@@ -43,6 +43,7 @@
                         </form>
                     </div>
                 </div>
+
                 <div class="mb-4">
                     <h5 class="card-title fw-semibold">Form Profil</h5>
                 </div>
@@ -62,16 +63,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <a href="{{ route('profile.delete.description') }}"
-                                            style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
+                                <td class="border-bottom-0" style="width: 10%;">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;"
                                             data-bs-target="#descriptionModal" data-bs-toggle="modal">
@@ -80,7 +72,7 @@
                                         </button>
                                     </div>
                                 </td>
-                                <td class="border-bottom-0">
+                                <td class="border-bottom-0" style="width: 90%;">
                                     <div>
                                         <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
                                         <h6 class="fw-semibold mb-0">
@@ -92,15 +84,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <a
-                                            href="{{ route('profile.delete.website_url') }} "style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </td>
                                 <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
                                         <button style="background-color: #ffff;border: none;"
@@ -124,16 +107,8 @@
                             <tr>
                                 <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
-                                        <a href="{{ route('profile.delete.phone_number') }}"
-                                            style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;" data-bs-target="#phoneNumberModal" data-bs-toggle="modal">
+                                        <button style="background-color: #ffff;border: none;"
+                                            data-bs-target="#phoneNumberModal" data-bs-toggle="modal">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
@@ -153,16 +128,9 @@
                             <tr>
                                 <td class="border-bottom-0">
                                     <div class="d-flex align-items-center gap-2">
-                                        <a href="{{ route('profile.delete.social_media') }}"
-                                            style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </a>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;"data-bs-target="#socialMediaModal" data-bs-toggle="modal">
+                                        <button
+                                            style="background-color: #ffff;border: none;"data-bs-target="#socialMediaModal"
+                                            data-bs-toggle="modal">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
                                         </button>
@@ -182,6 +150,10 @@
                         </tbody>
                     </table>
                 </div>
+                <a href="{{ route('profile.delete.description') }}">
+                    <button type="button" class="btn btn-outline-danger mt-3">Hapus</button>
+                </a>
+
             </div>
         </div>
     </div>
@@ -228,7 +200,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="phoneNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="phoneNumberModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -249,7 +222,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="socialMediaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="socialMediaModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
