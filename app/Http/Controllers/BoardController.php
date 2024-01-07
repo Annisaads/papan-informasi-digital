@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class BoardController extends Controller
 {
     public function index(){
-        $profile = Profile::first();
+        $profile = Profile::latest()->first();
         $video = Video::latest()->first();
         return view('board.index', compact('profile', 'video'));
     }

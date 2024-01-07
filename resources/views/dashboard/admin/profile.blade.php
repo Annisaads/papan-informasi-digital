@@ -44,115 +44,117 @@
                     </div>
                 </div>
 
-                <div class="mb-4">
-                    <h5 class="card-title fw-semibold">Form Profil</h5>
-                </div>
-                @if (session()->has('delete-success'))
-                    <div class="alert alert-success alert-dismissible fade show mt-3">
-                        <strong>Berhasil!</strong> {{ session('delete-success') }}
+                @if ($profile != null)
+                    <div class="mb-4">
+                        <h5 class="card-title fw-semibold">Form Profil</h5>
                     </div>
-                @endif
-                @if (session()->has('update-success'))
-                    <div class="alert alert-success alert-dismissible fade show mt-3">
-                        <strong>Berhasil!</strong> {{ session('update-success') }}
+                    @if (session()->has('delete-success'))
+                        <div class="alert alert-success alert-dismissible fade show mt-3">
+                            <strong>Berhasil!</strong> {{ session('delete-success') }}
+                        </div>
+                    @endif
+                    @if (session()->has('update-success'))
+                        <div class="alert alert-success alert-dismissible fade show mt-3">
+                            <strong>Berhasil!</strong> {{ session('update-success') }}
+                        </div>
+                    @endif
+                    <div class="table-responsive">
+                        <table class="table text-nowrap mb-0 align-middle">
+                            <thead class="text-dark fs-4">
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border-bottom-0" style="width: 5%;">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button style="background-color: #ffff;border: none;"
+                                                data-bs-target="#descriptionModal" data-bs-toggle="modal">
+                                                <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                    alt="">
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0" style="width: 95%;">
+                                        <div>
+                                            <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
+                                            <h6 class="fw-semibold mb-0">
+                                                @if ($profile)
+                                                    {{ $profile->description }}
+                                                @endif
+                                            </h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-bottom-0">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button style="background-color: #ffff;border: none;"
+                                                data-bs-target="#websiteUrlModal" data-bs-toggle="modal">
+                                                <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                    alt="">
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <div>
+                                            <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Alamat Web</h6>
+                                            <h6 class="fw-semibold mb-0">
+                                                @if ($profile)
+                                                    {{ $profile->website_url }}
+                                                @endif
+                                            </h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-bottom-0">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button style="background-color: #ffff;border: none;"
+                                                data-bs-target="#phoneNumberModal" data-bs-toggle="modal">
+                                                <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                    alt="">
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <div>
+                                            <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nomor Telepon</h6>
+                                            <h6 class="fw-semibold mb-0">
+                                                @if ($profile)
+                                                    {{ $profile->phone_number }}
+                                                @endif
+                                            </h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border-bottom-0">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <button
+                                                style="background-color: #ffff;border: none;"data-bs-target="#socialMediaModal"
+                                                data-bs-toggle="modal">
+                                                <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                    alt="">
+                                            </button>
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <div>
+                                            <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Media Sosial</h6>
+                                            <h6 class="fw-semibold mb-0">
+                                                @if ($profile)
+                                                    {{ $profile->social_media }}
+                                                @endif
+                                            </h6>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <a href="{{ route('profile.delete.profile') }}">
+                        <button type="button" class="btn btn-danger mt-3">Hapus</button>
+                    </a>
                 @endif
-                <div class="table-responsive">
-                    <table class="table text-nowrap mb-0 align-middle">
-                        <thead class="text-dark fs-4">
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border-bottom-0" style="width: 5%;">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;"
-                                            data-bs-target="#descriptionModal" data-bs-toggle="modal">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0" style="width: 95%;">
-                                    <div>
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Deskripsi Singkat</h6>
-                                        <h6 class="fw-semibold mb-0">
-                                            @if ($profile)
-                                                {{ $profile->description }}
-                                            @endif
-                                        </h6>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;"
-                                            data-bs-target="#websiteUrlModal" data-bs-toggle="modal">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div>
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Alamat Web</h6>
-                                        <h6 class="fw-semibold mb-0">
-                                            @if ($profile)
-                                                {{ $profile->website_url }}
-                                            @endif
-                                        </h6>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;"
-                                            data-bs-target="#phoneNumberModal" data-bs-toggle="modal">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div>
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nomor Telepon</h6>
-                                        <h6 class="fw-semibold mb-0">
-                                            @if ($profile)
-                                                {{ $profile->phone_number }}
-                                            @endif
-                                        </h6>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button
-                                            style="background-color: #ffff;border: none;"data-bs-target="#socialMediaModal"
-                                            data-bs-toggle="modal">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div>
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Media Sosial</h6>
-                                        <h6 class="fw-semibold mb-0">
-                                            @if ($profile)
-                                                {{ $profile->social_media }}
-                                            @endif
-                                        </h6>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <a href="{{ route('profile.delete.profile') }}">
-                    <button type="button" class="btn btn-danger mt-3">Hapus</button>
-                </a>
             </div>
         </div>
     </div>
@@ -189,7 +191,8 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="website_url" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan url website" value="{{  $profile != null ? $profile->website_url : ''}}"></input>
+                            placeholder="Tambahkan url website"
+                            value="{{ $profile != null ? $profile->website_url : '' }}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -211,7 +214,8 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="phone_number" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan nomor telepon" value="{{  $profile != null ? $profile->phone_number : ''}}"></input>
+                            placeholder="Tambahkan nomor telepon"
+                            value="{{ $profile != null ? $profile->phone_number : '' }}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -233,7 +237,8 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="social_media" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan media sosial" value="{{  $profile != null ? $profile->social_media : '' }}"></input>
+                            placeholder="Tambahkan media sosial"
+                            value="{{ $profile != null ? $profile->social_media : '' }}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
