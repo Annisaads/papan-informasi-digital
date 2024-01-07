@@ -168,7 +168,7 @@
                     <div class="modal-body">
                         @csrf
                         <textarea type="text" name="description" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan deskripsi" rows="5">{{ $profile->description }}</textarea>
+                            placeholder="Tambahkan deskripsi" rows="5">{{ $profile != null ? $profile->description : '' }}</textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -189,7 +189,7 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="website_url" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan url website" value="{{ $profile->website_url }}"></input>
+                            placeholder="Tambahkan url website" value="{{  $profile != null ? $profile->website_url : ''}}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -211,7 +211,7 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="phone_number" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan nomor telepon" value="{{ $profile->phone_number }}"></input>
+                            placeholder="Tambahkan nomor telepon" value="{{  $profile != null ? $profile->phone_number : ''}}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -233,7 +233,7 @@
                     <div class="modal-body">
                         @csrf
                         <input type="text" name="social_media" id="disabledTextInput" class="form-control"
-                            placeholder="Tambahkan media sosial" value="{{ $profile->social_media }}"></input>
+                            placeholder="Tambahkan media sosial" value="{{  $profile != null ? $profile->social_media : '' }}"></input>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

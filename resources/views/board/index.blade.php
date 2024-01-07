@@ -86,7 +86,10 @@
 
                                 <div class="column-3">
                                     <div class="div-32">
-                                        <img loading="lazy" srcset="{{ asset('img/video-ptsb.png') }}" class="img-2" />
+                                        <video id="vid" class="img-2"  controls loop autoplay muted>
+                                            <source src="{{ asset('storage') . '/' . $video->video }}" type="video/mp4">
+                                            Maaf, browser Anda tidak mendukung tag video.
+                                        </video>
                                         <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}" class="img-3" />
                                     </div>
                                 </div>
@@ -187,4 +190,5 @@
     </div>
     </div>
 </body>
+
 </html>

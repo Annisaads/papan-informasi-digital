@@ -7,10 +7,20 @@
                 <h5 class="card-title fw-semibold mb-4">Input Video Perusahaan</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('success') }}
+                            </div>
+                        @endif
+                        <form action="{{ route('video.create') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Video</label>
-                                <input type="file" id="disabledTextInput" class="form-control"></input>
+                                <input type="file" name="video" accept="video/*" id="disabledTextInput"
+                                    class="form-control"></input>
+                                @error('video')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
@@ -32,7 +42,7 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0" style="width: 95%;">
-                                    <h6 class="fw-semibold mb-0">video-singkat.MP4</h6>
+                                    <h6 class="fw-semibold mb-0">{{$video != null ? $video->video :''}}</h6>
                                 </td>
                             </tr>
                         </tbody>
@@ -41,4 +51,6 @@
             </div>
         </div>
     </div>
+
+    
 @endsection

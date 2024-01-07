@@ -41,6 +41,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/profil/edit-alamat-web', [ProfileController::class,'updateWebsiteUrl'])->name('profile.update.website_url');
     Route::post('/dashboard-admin/profil/edit-nomor-telepon', [ProfileController::class,'updatePhoneNumber'])->name('profile.update.phone_number');
     Route::post('/dashboard-admin/profil/edit-sosial-media', [ProfileController::class,'updateSocialMedia'])->name('profile.update.social_media');
+    Route::post('/dashboard-admin/video/tambah', [VideoController::class,'create'])->name('video.create');
 
 });
 
