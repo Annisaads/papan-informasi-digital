@@ -24,6 +24,12 @@ class VideoController extends Controller
             'video'=>$path
         ]);
         return redirect()->route('video.index')->with('success','Video berhasil disimpan');
+    }
 
+    public function delete(){
+        $video = Video::latest()->first();
+        Storage::disk('public')->delete($video->video);
+        $video->delete();
+        return redirect()->route('video.index')->with('delete-success','Video berhasil dihapus');
     }
 }

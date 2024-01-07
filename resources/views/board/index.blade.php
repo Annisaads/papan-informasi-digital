@@ -86,10 +86,18 @@
 
                                 <div class="column-3">
                                     <div class="div-32">
+                                        @if ($video != null)
                                         <video id="vid" class="img-2"  controls loop autoplay muted>
                                             <source src="{{ asset('storage') . '/' . $video->video }}" type="video/mp4">
                                             Maaf, browser Anda tidak mendukung tag video.
                                         </video>
+                                        @else
+                                        <video id="vid" class="img-2"  controls loop autoplay muted>
+                                            <source src="{{ asset('video/Video Company Profile  - PT Semen Baturaja (Persero) Tbk (Tahun 2019).mp4') }}" type="video/mp4">
+                                            Maaf, browser Anda tidak mendukung tag video.
+                                        </video>
+                                        @endif
+
                                         <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}" class="img-3" />
                                     </div>
                                 </div>
