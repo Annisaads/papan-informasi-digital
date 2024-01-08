@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Storage;
 class PhotoController extends Controller
 {
     public function index(){
-        return view("dashboard.admin.photo");
+        $photo = Photo::all();
+        return view("dashboard.admin.photo", compact("photo"));
        }
 
     public function create(Request $request){

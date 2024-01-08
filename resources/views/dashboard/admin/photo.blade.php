@@ -30,93 +30,35 @@
                         </form>
                     </div>
                 </div>
+                @if ($photo->isNotEmpty())
                 <h5 class="card-title mb-9 fw-semibold">Form Foto Perusahaan</h5>
                 <div class="table-responsive" style="max-height: 300px;">
                     <table class="table text-nowrap mb-0 align-middle">
                         <thead class="text-dark fs-4">
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="border-bottom-0" style="width: 5%;">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0" style="width: 95%;">
-                                    <h6 class="fw-semibold mb-0">foto1.jpg</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">foto2.jpg</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">foto3.jpg</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">foto4.jpg</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">foto5.jpg</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">foto6.jpg</h6>
-                                </td>
-                            </tr>
+                            @foreach ($photo as $photo)
+                                <tr>
+                                    <td class="border-bottom-0" style="width: 5%;">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <form action="{{ route('photo.delete', $photo->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" style="background-color: #ffff; border: none;">
+                                                    <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0" style="width: 95%;">
+                                        <h6 class="fw-semibold mb-0">{{ $photo->photo }}</h6>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
+                @endif
             </div>
         </div>
     </div>

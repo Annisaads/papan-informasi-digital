@@ -47,5 +47,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/profil/hapus-video', [VideoController::class,'delete'])->name('video.delete');
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
     Route::post('/dashboard-admin/foto/hapus-foto', [PhotoController::class,'delete'])->name('photo.delete');
+    Route::delete('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class, 'delete'])->name('photo.delete');
+
 });
 
