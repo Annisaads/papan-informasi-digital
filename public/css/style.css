@@ -681,7 +681,7 @@ isi
     background-color: var(--White, #fff);
     display: flex;
     margin-top: 20px;
-    width: 348px;
+    width: 347px;
     flex-direction: column;
     padding: 15px;
 }
