@@ -112,7 +112,7 @@ isi
     display: flex;
     flex-direction: column;
     line-height: normal;
-    width: 71%;
+    width: 70%;
     margin-left: 0px;
 }
 @media (max-width: 991px) {
@@ -493,7 +493,7 @@ isi
     display: flex;
     flex-direction: column;
     line-height: normal;
-    width: 29%;
+    width: 30%;
 }
 
 @media (max-width: 991px) {
