@@ -68,7 +68,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="{{route('foto.index')}}"
+              href="{{route('photo.index')}}"
               aria-expanded="false"
             >
               <span>
