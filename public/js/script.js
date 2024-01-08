@@ -71,8 +71,56 @@ function sesuaikanGambarCuaca(temperature, weatherDescription) {
     cuacaImg.classList.add('img-10');
 }
 
-window.onload = function() {
+window.onload = function () {
     tampilkanTanggal();
     tampilkanJam();
     tampilkanCuaca();
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".mySlides");
+    const frame = document.querySelector(".slide-frame");
+
+    function showSlides() {
+      frame.style.transition = "transform 1s ease";
+      slideIndex++;
+
+      frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+
+      if (slideIndex >= slides.length) {
+        // Kembali ke awal tanpa jeda
+        slideIndex = 0;
+        frame.style.transition = "none";
+        frame.style.transform = "translateX(-" + (slides.length - 1) * 100 + "%)";
+        setTimeout(() => {
+          frame.style.transition = "transform 1s ease";
+          frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+        }, 0);
+      }
+
+      setTimeout(showSlides, 2000);
+    }
+
+    showSlides(); // Mulai slideshow
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -98,7 +98,29 @@
                                         </video>
                                         @endif
 
-                                        <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}" class="img-3" />
+                                        <div class="slideshow-container">
+                                            <div class="slide-frame">
+                                              <div class="mySlides">
+                                                <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}" class="img-3" />
+                                              </div>
+
+                                              <div class="mySlides">
+                                                <img loading="lazy" srcset="{{ asset('img/hoax-ptsb.png') }}" class="img-3" />
+                                              </div>
+
+                                              <div class="mySlides">
+                                                <img loading="lazy" srcset="{{ asset('img/banner-ptsb.jpg') }}" class="img-3" />
+                                              </div>
+
+                                              <div class="mySlides">
+                                                <img loading="lazy" srcset="{{ asset('img/hakordia-ptsb.jpg') }}" class="img-3" />
+                                              </div>
+
+                                              <div class="mySlides">
+                                                <img loading="lazy" srcset="{{ asset('img/lapor-ptsb.jpg') }}" class="img-3" />
+                                              </div>
+                                            </div>
+                                          </div>
                                     </div>
                                 </div>
                             </div>
@@ -197,6 +219,7 @@
         </div>
     </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

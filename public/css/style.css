@@ -816,3 +816,27 @@ isi
     font-weight: 700;
     color: rgba(0, 73, 28, 1);
 }
+
+.slideshow-container {
+    max-width: 600px;
+    overflow: hidden;
+  }
+
+  .slide-frame {
+    display: flex;
+    transition: transform 1s ease;
+  }
+
+  .mySlides {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+  }
+
+  .img-3 {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
