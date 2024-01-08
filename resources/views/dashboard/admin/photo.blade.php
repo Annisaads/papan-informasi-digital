@@ -7,10 +7,24 @@
                 <h5 class="card-title fw-semibold mb-4">Input Foto Perusahaan</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('success') }}
+                            </div>
+                        @endif
+                        @if (session()->has('delete-success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('delete-success') }}
+                            </div>
+                        @endif
+                        <form action="{{ route('photo.create') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Foto</label>
-                                <input type="file" id="disabledTextInput" class="form-control"></input>
+                                <input type="file" name="photo" id="disabledTextInput" class="form-control" ></input>
+                                @error('photo')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
