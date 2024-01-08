@@ -539,7 +539,7 @@ isi
     align-self: stretch;
     padding: 6px 13px;
     font: 700 20px "Open Sans", sans-serif;
-    width: 345px;
+    width: 353px;
 }
 
 @media (max-width: 991px) {
@@ -681,7 +681,7 @@ isi
     background-color: var(--White, #fff);
     display: flex;
     margin-top: 20px;
-    width: 340px;
+    width: 348px;
     flex-direction: column;
     padding: 15px;
 }
