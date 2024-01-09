@@ -23,6 +23,10 @@
                                 <input type="text" id="disabledTextInput" class="form-control"
                                     placeholder="Tambahkan pesan"></input>
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Foto Tokoh</label>
+                                <input type="file" name="photo" id="disabledTextInput" class="form-control"></input>
+                            </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
@@ -37,6 +41,9 @@
                                 </th>
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0"></h6>
+                                </th>
+                                <th class="border-bottom-0">
+                                    <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Foto</h6>
                                 </th>
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nama</h6>
@@ -64,6 +71,14 @@
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
                                         </button>
                                     </div>
                                 </td>
@@ -99,6 +114,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal">Annisa Jamal</p>
                                 </td>
                                 <td class="border-bottom-0">
@@ -124,6 +147,14 @@
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
                                         </button>
                                     </div>
                                 </td>
@@ -159,6 +190,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal">Putri A</p>
                                 </td>
                                 <td class="border-bottom-0">
@@ -186,6 +225,14 @@
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
                                         </button>
                                     </div>
                                 </td>
@@ -221,6 +268,14 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
                                     <p class="mb-0 fw-normal">Mas Boy</p>
                                 </td>
                                 <td class="border-bottom-0">
@@ -248,6 +303,14 @@
                                         <button style="background-color: #ffff;border: none;">
                                             <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                 alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/img/foto-tokoh.jpg" width="30" alt=""
+                                                style="border-radius: 60px;">
                                         </button>
                                     </div>
                                 </td>

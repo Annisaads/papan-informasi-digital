@@ -87,40 +87,48 @@
                                 <div class="column-3">
                                     <div class="div-32">
                                         @if ($video != null)
-                                        <video id="vid" class="img-2"  controls loop autoplay muted>
-                                            <source src="{{ asset('storage') . '/' . $video->video }}" type="video/mp4">
-                                            Maaf, browser Anda tidak mendukung tag video.
-                                        </video>
+                                            <video id="vid" class="img-2" controls loop autoplay muted>
+                                                <source src="{{ asset('storage') . '/' . $video->video }}"
+                                                    type="video/mp4">
+                                                Maaf, browser Anda tidak mendukung tag video.
+                                            </video>
                                         @else
-                                        <video id="vid" class="img-2"  controls loop autoplay muted>
-                                            <source src="{{ asset('video/Video Company Profile  - PT Semen Baturaja (Persero) Tbk (Tahun 2019).mp4') }}" type="video/mp4">
-                                            Maaf, browser Anda tidak mendukung tag video.
-                                        </video>
+                                            <video id="vid" class="img-2" controls loop autoplay muted>
+                                                <source
+                                                    src="{{ asset('video/Video Company Profile  - PT Semen Baturaja (Persero) Tbk (Tahun 2019).mp4') }}"
+                                                    type="video/mp4">
+                                                Maaf, browser Anda tidak mendukung tag video.
+                                            </video>
                                         @endif
 
                                         <div class="slideshow-container">
                                             <div class="slide-frame">
-                                              <div class="mySlides">
-                                                <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}" class="img-3" />
-                                              </div>
+                                                <div class="mySlides">
+                                                    <img loading="lazy" srcset="{{ asset('img/foto-ptsb.jpg') }}"
+                                                        class="img-3" />
+                                                </div>
 
-                                              <div class="mySlides">
-                                                <img loading="lazy" srcset="{{ asset('img/hoax-ptsb.png') }}" class="img-3" />
-                                              </div>
+                                                <div class="mySlides">
+                                                    <img loading="lazy" srcset="{{ asset('img/hoax-ptsb.png') }}"
+                                                        class="img-3" />
+                                                </div>
 
-                                              <div class="mySlides">
-                                                <img loading="lazy" srcset="{{ asset('img/banner-ptsb.jpg') }}" class="img-3" />
-                                              </div>
+                                                <div class="mySlides">
+                                                    <img loading="lazy" srcset="{{ asset('img/banner-ptsb.jpg') }}"
+                                                        class="img-3" />
+                                                </div>
 
-                                              <div class="mySlides">
-                                                <img loading="lazy" srcset="{{ asset('img/hakordia-ptsb.jpg') }}" class="img-3" />
-                                              </div>
+                                                <div class="mySlides">
+                                                    <img loading="lazy" srcset="{{ asset('img/hakordia-ptsb.jpg') }}"
+                                                        class="img-3" />
+                                                </div>
 
-                                              <div class="mySlides">
-                                                <img loading="lazy" srcset="{{ asset('img/lapor-ptsb.jpg') }}" class="img-3" />
-                                              </div>
+                                                <div class="mySlides">
+                                                    <img loading="lazy" srcset="{{ asset('img/lapor-ptsb.jpg') }}"
+                                                        class="img-3" />
+                                                </div>
                                             </div>
-                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -178,10 +186,13 @@
                                 </div>
                                 <div class="div-49">
                                     <div class="div-50">
-                                        <img loading="lazy" srcset="{{ asset('img/logo-ig.png') }}" class="img-5" />
-                                        <img loading="lazy" srcset="{{ asset('img/logo-fb.png') }}" class="img-6" />
+                                        <img loading="lazy" srcset="{{ asset('img/logo-ig.png') }}"
+                                            class="img-5" />
+                                        <img loading="lazy" srcset="{{ asset('img/logo-fb.png') }}"
+                                            class="img-6" />
                                         <img loading="lazy" srcset="{{ asset('img/logo-x.png') }}" class="img-7" />
-                                        <img loading="lazy" srcset="{{ asset('img/logo-ytb.png') }}" class="img-8" />
+                                        <img loading="lazy" srcset="{{ asset('img/logo-ytb.png') }}"
+                                            class="img-8" />
                                     </div>
                                     <div class="div-51">
                                         @if ($profile)
