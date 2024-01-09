@@ -3,7 +3,6 @@
 use App\Models\Video;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\FotoController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\VideoController;
@@ -11,6 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\PesanTokohController;
+use App\Models\PesanTokoh;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -48,6 +48,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
     Route::post('/dashboard-admin/foto/hapus-foto', [PhotoController::class,'delete'])->name('photo.delete');
     Route::delete('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class, 'delete'])->name('photo.delete');
-
+    Route::post('/dashboard-admin/pesan-tokoh/tambah', [PesanTokohController::class,'create'])->name('pesan-tokoh.create');
+    Route::get('/dashboard-admin/pesan-tokoh/hapus-pesan-tokoh', [PesanTokohController::class,'delete'])->name('pesan-tokoh.delete');
+    Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh', [PesanTokohController::class,'update'])->name('pesan-tokoh.update');
+    Route::delete('/dashboard-admin/pesan-tokoh/hapus-pesan-tokoh/{id}', [PesanTokohController::class, 'delete'])->name('pesan-tokoh.delete');
 });
-
