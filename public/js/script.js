@@ -89,21 +89,25 @@ document.addEventListener("DOMContentLoaded", function() {
       frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
 
       if (slideIndex >= slides.length) {
-        // Kembali ke awal tanpa jeda
-        slideIndex = 0;
+        // Langsung lanjut ke slide pertama tanpa transisi
         frame.style.transition = "none";
-        frame.style.transform = "translateX(-" + (slides.length - 1) * 100 + "%)";
+        frame.style.transform = "translateX(0)";
+        slideIndex = 0;
         setTimeout(() => {
           frame.style.transition = "transform 1s ease";
-          frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
         }, 0);
       }
 
-      setTimeout(showSlides, 2000);
+      setTimeout(showSlides, 2500);
     }
 
-    showSlides(); // Mulai slideshow
+    showSlides();
   });
+
+
+
+
+
 
 
 

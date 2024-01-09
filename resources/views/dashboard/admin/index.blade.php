@@ -90,7 +90,7 @@
                             href="{{ route('video.index') }}">Video</a></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Video</h6>
                     <div class="card-body">
-                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
+                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahVideo }}</h3>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                     </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Foto</h6>
                     <div class="card-body">
-                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
+                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahFoto }}</h3>
                     </div>
                 </div>
             </div>
