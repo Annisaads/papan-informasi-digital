@@ -45,7 +45,7 @@
                                 Jumlah Pesan Tokoh
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
+                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahPesanTokoh }}</h3>
                             </div>
                         </div>
                     </div>
