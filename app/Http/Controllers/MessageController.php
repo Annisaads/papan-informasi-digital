@@ -22,17 +22,17 @@ class MessageController extends Controller
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
-        $photoPath = null;
+        $path = null;
 
         if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('photos', 'public');
+            $path = $request->file('photo')->store('photos', 'public');
         }
 
         Message::create([
             'name' => $request->name,
             'position' => $request->position,
             'message' => $request->message,
-            'photo' => $photoPath,
+            'photo' => $path,
         ]);
 
         return redirect()->route('message.index')->with('success', 'Data berhasil disimpan');
