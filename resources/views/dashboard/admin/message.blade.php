@@ -12,9 +12,9 @@
                                 <strong>Berhasil!</strong> {{ session('success') }}
                             </div>
                         @endif
-                        @if (session()->has('error'))
-                            <div class="alert alert-danger alert-dismissible fade show mt-3">
-                                <strong>Gagal!</strong> {{ session('error') }}
+                        @if (session()->has('delete-success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('delete-success') }}
                             </div>
                         @endif
                         <form action="{{ route('message.create') }}" method="POST" enctype="multipart/form-data">
@@ -41,6 +41,18 @@
                 </div>
                 @if ($message->isNotEmpty())
                     <h5 class="card-title fw-semibold mb-4">Form Pesan Tokoh</h5>
+                    <div>
+                        @if (session()->has('delete-success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('delete-success') }}
+                            </div>
+                        @endif
+                        @if (session()->has('update-success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('update-success') }}
+                            </div>
+                        @endif
+                    </div>
                     <div class="table-responsive" style="max-height: 400px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
@@ -74,49 +86,66 @@
                                                     @csrf
                                                     @method('GET')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
-                                                        <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
+                                                        <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                            alt="">
                                                     </button>
                                                 </form>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal" data-bs-target="#updateMessageModal{{$message->id}}">
-                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
+                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
+                                                    data-bs-target="#updateMessageModal{{ $message->id }}">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                        alt="">
                                                 </button>
                                             </div>
                                         </td>
-                                        <div class="modal fade" id="updateMessageModal{{$message->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="updateMessageModal{{ $message->id }}" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="exampleModalLabel">Ubah Pesan Tokoh</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form action="{{ route('message.update', $message->id) }}" method="POST" enctype="multipart/form-data">
+                                                        <form action="{{ route('message.update', $message->id) }}"
+                                                            method="POST" enctype="multipart/form-data">
                                                             @csrf
                                                             @method('POST')
                                                             <!-- Add input fields for updating message -->
                                                             <div class="mb-3">
-                                                                <label for="updateName" class="form-label">Nama Tokoh</label>
-                                                                <input type="text" class="form-control" id="updateName" name="name" value="{{ $message->name }}">
+                                                                <label for="updateName" class="form-label">Nama
+                                                                    Tokoh</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="updateName" name="name"
+                                                                    value="{{ $message->name }}">
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="updatePosition" class="form-label">Jabatan Tokoh</label>
-                                                                <input type="text" class="form-control" id="updatePosition" name="position" value="{{ $message->position }}">
+                                                                <label for="updatePosition" class="form-label">Jabatan
+                                                                    Tokoh</label>
+                                                                <input type="text" class="form-control"
+                                                                    id="updatePosition" name="position"
+                                                                    value="{{ $message->position }}">
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="updateMessage" class="form-label">Pesan Tokoh</label>
+                                                                <label for="updateMessage" class="form-label">Pesan
+                                                                    Tokoh</label>
                                                                 <textarea class="form-control" id="updateMessage" name="message">{{ $message->message }}</textarea>
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="updatePhoto" class="form-label">Foto Tokoh</label>
-                                                                <input type="file" class="form-control" id="updatePhoto" name="photo">
+                                                                <label for="updatePhoto" class="form-label">Foto
+                                                                    Tokoh</label>
+                                                                <input type="file" class="form-control"
+                                                                    id="updatePhoto" name="photo">
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                                                                <button type="submit" class="btn btn-primary ml-auto">Simpan</button>
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Tutup</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary ml-auto">Simpan</button>
                                                             </div>
                                                         </form>
                                                     </div>
