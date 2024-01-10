@@ -46,10 +46,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/video/tambah', [VideoController::class,'create'])->name('video.create');
     Route::get('/dashboard-admin/profil/hapus-video', [VideoController::class,'delete'])->name('video.delete');
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
-    Route::post('/dashboard-admin/foto/hapus-foto', [PhotoController::class,'delete'])->name('photo.delete');
-    Route::delete('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class, 'delete'])->name('photo.delete');
+    Route::get('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class,'delete'])->name('photo.delete');
     Route::post('/dashboard-admin/message/tambah', [MessageController::class,'create'])->name('message.create');
-    Route::get('/dashboard-admin/message/hapus-message', [MessageController::class,'delete'])->name('message.delete');
-    Route::post('/dashboard-admin/message/edit-message', [MessageController::class,'update'])->name('message.update');
-    Route::delete('/dashboard-admin/message/hapus-message/{id}', [MessageController::class, 'delete'])->name('message.delete');
+    Route::get('/dashboard-admin/message/hapus-message/{id}', [MessageController::class,'delete'])->name('message.delete');
+    Route::post('/dashboard-admin/message/edit-message/{id}', [MessageController::class,'update'])->name('message.update');
 });

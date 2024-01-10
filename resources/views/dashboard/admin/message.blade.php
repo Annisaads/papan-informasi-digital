@@ -72,7 +72,7 @@
                                             <div class="d-flex align-items-center gap-2">
                                                 <form action="{{ route('message.delete', $message->id) }}" method="POST">
                                                     @csrf
-                                                    @method('DELETE')
+                                                    @method('GET')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
                                                         <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
                                                     </button>
@@ -81,13 +81,45 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <a href="{{ route('message.update', $message->id) }}">
-                                                    <button style="background-color: #ffff;border: none;">
-                                                        <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
-                                                    </button>
-                                                </a>
+                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal" data-bs-target="#updateMessageModal{{$message->id}}">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
+                                                </button>
                                             </div>
                                         </td>
+                                        <div class="modal fade" id="updateMessageModal{{$message->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Ubah Pesan Tokoh</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="{{ route('message.update', $message->id) }}" method="POST" enctype="multipart/form-data">
+                                                            @csrf
+                                                            @method('POST')
+                                                            <!-- Add input fields for updating message -->
+                                                            <div class="mb-3">
+                                                                <label for="updateName" class="form-label">Nama Tokoh</label>
+                                                                <input type="text" class="form-control" id="updateName" name="name" value="{{ $message->name }}">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="updatePosition" class="form-label">Jabatan Tokoh</label>
+                                                                <input type="text" class="form-control" id="updatePosition" name="position" value="{{ $message->position }}">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="updateMessage" class="form-label">Pesan Tokoh</label>
+                                                                <textarea class="form-control" id="updateMessage" name="message">{{ $message->message }}</textarea>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label for="updatePhoto" class="form-label">Foto Tokoh</label>
+                                                                <input type="file" class="form-control" id="updatePhoto" name="photo">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-primary">Simpan</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
                                                 @if ($message->photo)

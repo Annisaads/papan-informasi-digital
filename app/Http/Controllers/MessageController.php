@@ -54,15 +54,40 @@ class MessageController extends Controller
         return redirect()->route('message.index')->with('delete-error', 'Data tidak ditemukan.');
     }
 
-    public function update(Request $request){
-        $message = Message::latest()->first();
+    public function update(Request $request, $id){
+        $message = Message::find($id);
 
-        $message->update([
-            'name' => $request->name,
-            'position' => $request->position,
-            'message' => $request->message
-        ]);
-        return redirect()->route('message.index')->with('update-success','Data berhasil diedit');
+        if ($message) {
+            $request->validate([
+                'name' => 'required',
+                'position' => 'required',
+                'message' => 'required',
+                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            // Hapus foto lama jika ada foto baru diunggah
+            if ($request->hasFile('photo')) {
+                Storage::disk('public')->delete($message->photo);
+            }
+
+            $path = $message->photo;
+
+            if ($request->hasFile('photo')) {
+                $path = $request->file('photo')->store('photo', 'public');
+            }
+
+            $message->update([
+                'name' => $request->name,
+                'position' => $request->position,
+                'message' => $request->message,
+                'photo' => $path,
+            ]);
+
+            return redirect()->route('message.index')->with('update-success','Data berhasil diedit');
+        }
+
+        return redirect()->route('message.index')->with('update-error', 'Data tidak ditemukan.');
     }
+
 
 }

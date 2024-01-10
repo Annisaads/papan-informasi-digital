@@ -43,7 +43,7 @@
                                         <div class="d-flex align-items-center gap-2">
                                             <form action="{{ route('photo.delete', $photo->id) }}" method="POST">
                                                 @csrf
-                                                @method('DELETE')
+                                                @method('GET')
                                                 <button type="submit" style="background-color: #ffff; border: none;">
                                                     <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
                                                 </button>
