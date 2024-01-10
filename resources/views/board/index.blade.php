@@ -139,20 +139,22 @@
                                 <img loading="lazy" srcset="{{ asset('img/foto-tokoh.jpg') }}" class="img-4" />
                                 <div class="div-35">
                                     <div class="div-36">
-                                        <div class="div-37">Suherman Yahya</div>
+                                        <div class="div-37">
+                                            @if ($message)
+                                                {{ $message->name }}
+                                            @endif
+                                        </div>
                                         <div class="div-38"></div>
                                         <div class="div-39">
-                                            Direktur Utama PT Semen Baturaja Tbk
+                                            @if ($message)
+                                                {{ $message->position }}
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="div-40">
-                                        Dalam menghadapi persaingan industri semen nasional yang semakin kompetitif dan
-                                        upaya untuk menciptakan pertumbuhan kinerja yang berkelanjutan, Perseroan telah
-                                        merumuskan berbagai kebijakan dan inisiatif strategis yang tengah dijalankan
-                                        tentunya dengan tetap mematuhi regulasi yang berlaku serta memperhatikan aspek
-                                        risiko yang mungkin akan timbul. Pokok penting kebijakan dan inisiatif strategis
-                                        Perseroan berfokus pada Market Share Expansion Through Industrial Synergy, Cost
-                                        Leadership Through SMBRGO45 Program dan Competency Improvement of Employee.
+                                        @if ($message)
+                                            {{ $message->message }}
+                                        @endif
                                     </div>
                                 </div>
                             </div>
