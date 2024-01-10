@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class BoardController extends Controller
 {
     public function index(){
-        $photo = Photo::latest()->first();
+        $photo = Photo::all();
         $message = Message::latest()->first();
         $profile = Profile::latest()->first();
         $video = Video::latest()->first();
