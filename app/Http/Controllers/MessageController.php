@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
-use App\Models\PesanTokoh;
+use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class PesanTokohController extends Controller
+class MessageController extends Controller
 {
     public function index(){
-        $message = PesanTokoh::all();
-        return view("dashboard.admin.pesan-tokoh", compact('message'));
+        $message = Message::all();
+        return view("dashboard.admin.message", compact('message'));
     }
 
     public function create(Request $request) {
@@ -28,18 +28,18 @@ class PesanTokohController extends Controller
             $photoPath = $request->file('photo')->store('photos', 'public');
         }
 
-        PesanTokoh::create([
+        Message::create([
             'name' => $request->name,
             'position' => $request->position,
             'message' => $request->message,
             'photo' => $photoPath,
         ]);
 
-        return redirect()->route('pesan-tokoh.index')->with('success', 'Data berhasil disimpan');
+        return redirect()->route('message.index')->with('success', 'Data berhasil disimpan');
     }
 
     public function delete($id) {
-        $message = PesanTokoh::find($id);
+        $message = Message::find($id);
 
         if ($message) {
             if ($message->photo) {
@@ -48,21 +48,21 @@ class PesanTokohController extends Controller
 
             $message->delete();
 
-            return redirect()->route('pesan-tokoh.index')->with('delete-success', 'Data berhasil dihapus');
+            return redirect()->route('message.index')->with('delete-success', 'Data berhasil dihapus');
         }
 
-        return redirect()->route('pesan-tokoh.index')->with('delete-error', 'Data tidak ditemukan.');
+        return redirect()->route('message.index')->with('delete-error', 'Data tidak ditemukan.');
     }
 
     public function update(Request $request){
-        $message = PesanTokoh::latest()->first();
+        $message = Message::latest()->first();
 
         $message->update([
             'name' => $request->name,
             'position' => $request->position,
             'message' => $request->message
         ]);
-        return redirect()->route('pesan-tokoh.index')->with('update-success','Data berhasil diedit');
+        return redirect()->route('message.index')->with('update-success','Data berhasil diedit');
     }
 
 }

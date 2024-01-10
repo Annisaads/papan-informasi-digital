@@ -17,7 +17,7 @@
                                 <strong>Gagal!</strong> {{ session('error') }}
                             </div>
                         @endif
-                        <form action="{{ route('pesan-tokoh.create') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('message.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Tokoh</label>
@@ -70,7 +70,7 @@
                                     <tr>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('pesan-tokoh.delete', $message->id) }}" method="POST">
+                                                <form action="{{ route('message.delete', $message->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
@@ -81,7 +81,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <a href="{{ route('pesan-tokoh.update', $message->id) }}">
+                                                <a href="{{ route('message.update', $message->id) }}">
                                                     <button style="background-color: #ffff;border: none;">
                                                         <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
                                                     </button>

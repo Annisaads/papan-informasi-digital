@@ -9,8 +9,8 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\PesanTokohController;
-use App\Models\PesanTokoh;
+use App\Http\Controllers\MessageController;
+use App\Models\Message;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -36,7 +36,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
     Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
     Route::get('/dashboard-admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
-    Route::get('/dashboard-admin/pesan-tokoh', [PesanTokohController::class, 'index'])->name('pesan-tokoh.index');
+    Route::get('/dashboard-admin/message', [MessageController::class, 'index'])->name('message.index');
     Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
     Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
     Route::post('/dashboard-admin/profil/edit-deskripsi', [ProfileController::class,'updateDescription'])->name('profile.update.description');
@@ -48,8 +48,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
     Route::post('/dashboard-admin/foto/hapus-foto', [PhotoController::class,'delete'])->name('photo.delete');
     Route::delete('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class, 'delete'])->name('photo.delete');
-    Route::post('/dashboard-admin/pesan-tokoh/tambah', [PesanTokohController::class,'create'])->name('pesan-tokoh.create');
-    Route::get('/dashboard-admin/pesan-tokoh/hapus-pesan-tokoh', [PesanTokohController::class,'delete'])->name('pesan-tokoh.delete');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh', [PesanTokohController::class,'update'])->name('pesan-tokoh.update');
-    Route::delete('/dashboard-admin/pesan-tokoh/hapus-pesan-tokoh/{id}', [PesanTokohController::class, 'delete'])->name('pesan-tokoh.delete');
+    Route::post('/dashboard-admin/message/tambah', [MessageController::class,'create'])->name('message.create');
+    Route::get('/dashboard-admin/message/hapus-message', [MessageController::class,'delete'])->name('message.delete');
+    Route::post('/dashboard-admin/message/edit-message', [MessageController::class,'update'])->name('message.update');
+    Route::delete('/dashboard-admin/message/hapus-message/{id}', [MessageController::class, 'delete'])->name('message.delete');
 });

@@ -92,7 +92,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="{{route('pesan-tokoh.index')}}"
+              href="{{route('message.index')}}"
               aria-expanded="false"
             >
               <span>
