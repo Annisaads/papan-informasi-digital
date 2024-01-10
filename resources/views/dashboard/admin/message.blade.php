@@ -114,7 +114,10 @@
                                                                 <label for="updatePhoto" class="form-label">Foto Tokoh</label>
                                                                 <input type="file" class="form-control" id="updatePhoto" name="photo">
                                                             </div>
-                                                            <button type="submit" class="btn btn-primary">Simpan</button>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                                                <button type="submit" class="btn btn-primary ml-auto">Simpan</button>
+                                                            </div>
                                                         </form>
                                                     </div>
                                                 </div>
