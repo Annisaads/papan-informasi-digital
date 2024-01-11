@@ -24,13 +24,13 @@
                     <!-- Pengumuman -->
                     <div class="card-body p-2">
                         <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
-                                href="{{ route('pengumuman.index') }}">Pengumuman</a></h5>
+                                href="{{ route('announcement.index') }}">Pengumuman</a></h5>
                         <div class="card">
                             <div class="card-header">
                                 Jumlah Pengumuman
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">7</h3>
+                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahPengumuman }}</h3>
                             </div>
                         </div>
                     </div>

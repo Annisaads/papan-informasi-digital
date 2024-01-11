@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Photo;
 use App\Models\Message;
 use Illuminate\Http\Request;
@@ -38,20 +39,11 @@ class MessageController extends Controller
         return redirect()->route('message.index')->with('success', 'Data berhasil disimpan');
     }
 
-    public function delete($id) {
-        $message = Message::find($id);
+    public function delete(){
+        $announcement = Announcement::latest()->first();
+        $announcement->delete();
 
-        if ($message) {
-            if ($message->photo) {
-                Storage::disk('public')->delete($message->photo);
-            }
-
-            $message->delete();
-
-            return redirect()->route('message.index')->with('delete-success', 'Data berhasil dihapus');
-        }
-
-        return redirect()->route('message.index')->with('delete-error', 'Data tidak ditemukan.');
+        return redirect()->route('announcement.index')->with('delete-success','Pengumuman berhasil dihapus');
     }
 
     public function update(Request $request, $id){
@@ -65,7 +57,7 @@ class MessageController extends Controller
                 'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
-            // Hapus foto lama jika ada foto baru diunggah
+
             if ($request->hasFile('photo')) {
                 Storage::disk('public')->delete($message->photo);
             }

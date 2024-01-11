@@ -53,6 +53,6 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/message/hapus-message/{id}', [MessageController::class,'delete'])->name('message.delete');
     Route::post('/dashboard-admin/message/edit-message/{id}', [MessageController::class,'update'])->name('message.update');
     Route::post('/dashboard-admin/announcement/tambah', [AnnouncementController::class,'create'])->name('announcement.create');
-    Route::get('/dashboard-admin/announcement/hapus-announcement/{id}', [MessageController::class,'delete'])->name('announcement.delete');
-    Route::post('/dashboard-admin/announcement/edit-announcement/{id}', [MessageController::class,'update'])->name('announcement.update');
+    Route::get('/dashboard-admin/announcement/hapus-announcement/{id}', [AnnouncementController::class,'delete'])->name('announcement.delete');
+    Route::post('/dashboard-admin/announcement/edit-announcement/{id}', [AnnouncementController::class,'update'])->name('announcement.update');
 });
