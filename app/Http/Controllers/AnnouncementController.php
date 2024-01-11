@@ -14,7 +14,6 @@ class AnnouncementController extends Controller
 
     public function create(Request $request){
         $data = $request->validate([
-            'date' => 'required',
             'announcement' => 'required'
         ]);
 
