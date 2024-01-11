@@ -17,15 +17,12 @@
                                 <strong>Gagal!</strong> {{ session('error') }}
                             </div>
                         @endif
-                        <form action="{{route('announcement.create')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('announcement.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Tanggal Pengumuman</label>
-                                <input name="date" type="date" id="disabledTextInput" class="form-control">
-                            </div>
-                            <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Isi Pengumuman</label>
-                                <textarea name="announcement" type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" rows="5"></textarea>
+                                <textarea name="announcement" type="text" id="disabledTextInput" class="form-control"
+                                    placeholder="Tambahkan pengumuman" rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
@@ -41,9 +38,6 @@
                                 </th>
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0"></h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Tanggal</h6>
                                 </th>
                                 <th class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Isi</h6>
@@ -69,7 +63,28 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
+                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do
+                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
+                                        exercitation</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
                                 </td>
                                 <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -96,7 +111,28 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
+                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do
+                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
+                                        exercitation</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                </td>
+                                <td class="border-bottom-0">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <button style="background-color: #ffff;border: none;">
+                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                alt="">
+                                        </button>
+                                    </div>
                                 </td>
                                 <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -123,9 +159,6 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         sed do
                                         eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
@@ -150,9 +183,6 @@
                                     </div>
                                 </td>
                                 <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                         sed do
                                         eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
@@ -175,63 +205,6 @@
                                                 alt="">
                                         </button>
                                     </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
-                                        exercitation</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do
-                                        eiusmod tempor incididunt ut labore Ut enim ad minim veniam, quis nostrud
-                                        exercitation</h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <button style="background-color: #ffff;border: none;">
-                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                alt="">
-                                        </button>
-                                    </div>
-                                </td>
-                                <td class="border-bottom-0">
-                                    <p class="mb-0 fw-normal">04/01/2024</p>
                                 </td>
                                 <td class="border-bottom-0">
                                     <h6 class="fw-semibold mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
