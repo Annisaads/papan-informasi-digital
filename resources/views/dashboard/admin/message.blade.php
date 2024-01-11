@@ -115,7 +115,6 @@
                                                             method="POST" enctype="multipart/form-data">
                                                             @csrf
                                                             @method('POST')
-                                                            <!-- Add input fields for updating message -->
                                                             <div class="mb-3">
                                                                 <label for="updateName" class="form-label">Nama
                                                                     Tokoh</label>

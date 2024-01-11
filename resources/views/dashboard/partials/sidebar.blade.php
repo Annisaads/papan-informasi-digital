@@ -80,7 +80,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="{{route('pengumuman.index')}}"
+              href="{{route('announcement.index')}}"
               aria-expanded="false"
             >
               <span>

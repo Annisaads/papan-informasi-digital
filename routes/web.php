@@ -1,16 +1,18 @@
 <?php
 
 use App\Models\Video;
+use App\Models\Message;
+use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\MessageController;
-use App\Models\Message;
+use App\Http\Controllers\AnnouncementController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -35,7 +37,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/profil', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
     Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
-    Route::get('/dashboard-admin/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
+    Route::get('/dashboard-admin/announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
     Route::get('/dashboard-admin/message', [MessageController::class, 'index'])->name('message.index');
     Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
     Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
@@ -50,4 +52,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/message/tambah', [MessageController::class,'create'])->name('message.create');
     Route::get('/dashboard-admin/message/hapus-message/{id}', [MessageController::class,'delete'])->name('message.delete');
     Route::post('/dashboard-admin/message/edit-message/{id}', [MessageController::class,'update'])->name('message.update');
+    Route::post('/dashboard-admin/announcement/tambah', [AnnouncementController::class,'create'])->name('announcement.create');
+    Route::get('/dashboard-admin/announcement/hapus-announcement/{id}', [MessageController::class,'delete'])->name('announcement.delete');
+    Route::post('/dashboard-admin/announcement/edit-announcement/{id}', [MessageController::class,'update'])->name('announcement.update');
 });

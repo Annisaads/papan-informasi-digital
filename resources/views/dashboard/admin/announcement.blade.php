@@ -7,14 +7,25 @@
                 <h5 class="card-title fw-semibold mb-4">Input Pengumuman</h5>
                 <div class="card">
                     <div class="card-body">
-                        <form>
+                        @if (session()->has('success'))
+                            <div class="alert alert-success alert-dismissible fade show mt-3">
+                                <strong>Berhasil!</strong> {{ session('success') }}
+                            </div>
+                        @endif
+                        @if (session()->has('error'))
+                            <div class="alert alert-danger alert-dismissible fade show mt-3">
+                                <strong>Gagal!</strong> {{ session('error') }}
+                            </div>
+                        @endif
+                        <form action="{{route('announcement.create')}}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Tanggal Pengumuman</label>
-                                <input type="date" id="disabledTextInput" class="form-control">
+                                <input name="date" type="date" id="disabledTextInput" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Isi Pengumuman</label>
-                                <textarea type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" rows="5"></textarea>
+                                <textarea name="announcement" type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
