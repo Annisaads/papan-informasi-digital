@@ -122,28 +122,23 @@
 
                         <div class="div-33">
                             <div class="div-34">
-                                <img loading="lazy" srcset="{{ asset('storage') . '/' . $message->photo }}"
-                                    class="img-4" />
+                                @if ($qoute)
+                                <img loading="lazy" srcset="{{ asset('storage') . '/' . $qoute->photo }}" class="img-4" />
                                 <div class="div-35">
                                     <div class="div-36">
                                         <div class="div-37">
-                                            @if ($message)
-                                                {{ $message->name }}
-                                            @endif
+                                            {{ $qoute->name }}
                                         </div>
                                         <div class="div-38"></div>
                                         <div class="div-39">
-                                            @if ($message)
-                                                {{ $message->position }}
-                                            @endif
+                                            {{ $qoute->position }}
                                         </div>
                                     </div>
                                     <div class="div-40">
-                                        @if ($message)
-                                            {{ $message->message }}
-                                        @endif
+                                        {{ $qoute->qoute }}
                                     </div>
                                 </div>
+                            @endif
                             </div>
                         </div>
                     </div>

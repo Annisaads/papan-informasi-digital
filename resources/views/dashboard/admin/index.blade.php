@@ -39,7 +39,7 @@
                     <!-- Pesan Tokoh -->
                     <div class="card-body p-2">
                         <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
-                                href="{{ route('message.index') }}">Pesan Tokoh</a></h5>
+                                href="{{ route('qoute.index') }}">Pesan Tokoh</a></h5>
                         <div class="card">
                             <div class="card-header">
                                 Jumlah Pesan Tokoh

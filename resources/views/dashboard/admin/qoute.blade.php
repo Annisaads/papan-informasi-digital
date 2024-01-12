@@ -17,7 +17,7 @@
                                 <strong>Berhasil!</strong> {{ session('delete-success') }}
                             </div>
                         @endif
-                        <form action="{{ route('message.create') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('qoute.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Tokoh</label>
@@ -28,8 +28,8 @@
                                 <input name="position" class="form-control" placeholder="Tambahkan jabatan">
                             </div>
                             <div class="mb-3">
-                                <label for="message" class="form-label">Pesan Tokoh</label>
-                                <input name="message" type="text" class="form-control" placeholder="Tambahkan pesan">
+                                <label for="qoute" class="form-label">Pesan Tokoh</label>
+                                <input name="qoute" type="text" class="form-control" placeholder="Tambahkan pesan">
                             </div>
                             <div class="mb-3">
                                 <label for="photo" class="form-label">Foto Tokoh</label>
@@ -39,7 +39,7 @@
                         </form>
                     </div>
                 </div>
-                @if ($message->isNotEmpty())
+                @if ($qoute->isNotEmpty())
                     <h5 class="card-title fw-semibold mb-4">Form Pesan Tokoh</h5>
                     <div>
                         @if (session()->has('delete-success'))
@@ -78,11 +78,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($message as $message)
+                                @foreach ($qoute as $qoute)
                                     <tr>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('message.delete', $message->id) }}" method="POST">
+                                                <form action="{{ route('qoute.delete', $qoute->id) }}" method="POST">
                                                     @csrf
                                                     @method('GET')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
@@ -95,13 +95,13 @@
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
                                                 <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
-                                                    data-bs-target="#updateMessageModal{{ $message->id }}">
+                                                    data-bs-target="#updateMessageModal{{ $qoute->id }}">
                                                     <img src="/dashboard/assets/images/logos/pencil.png" width="20"
                                                         alt="">
                                                 </button>
                                             </div>
                                         </td>
-                                        <div class="modal fade" id="updateMessageModal{{ $message->id }}" tabindex="-1"
+                                        <div class="modal fade" id="updateMessageModal{{ $qoute->id }}" tabindex="-1"
                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
@@ -111,7 +111,7 @@
                                                             aria-label="Close"></button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form action="{{ route('message.update', $message->id) }}"
+                                                        <form action="{{ route('qoute.update', $qoute->id) }}"
                                                             method="POST" enctype="multipart/form-data">
                                                             @csrf
                                                             @method('POST')
@@ -120,19 +120,19 @@
                                                                     Tokoh</label>
                                                                 <input type="text" class="form-control"
                                                                     id="updateName" name="name"
-                                                                    value="{{ $message->name }}">
+                                                                    value="{{ $qoute->name }}">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="updatePosition" class="form-label">Jabatan
                                                                     Tokoh</label>
                                                                 <input type="text" class="form-control"
                                                                     id="updatePosition" name="position"
-                                                                    value="{{ $message->position }}">
+                                                                    value="{{ $qoute->position }}">
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="updateMessage" class="form-label">Pesan
                                                                     Tokoh</label>
-                                                                <textarea class="form-control" id="updateMessage" name="message">{{ $message->message }}</textarea>
+                                                                <textarea class="form-control" id="updateMessage" name="qoute">{{ $qoute->qoute }}</textarea>
                                                             </div>
                                                             <div class="mb-3">
                                                                 <label for="updatePhoto" class="form-label">Foto
@@ -153,20 +153,20 @@
                                         </div>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                @if ($message->photo)
-                                                    <img src="{{ asset('storage/' . $message->photo) }}" width="30"
+                                                @if ($qoute->photo)
+                                                    <img src="{{ asset('storage/' . $qoute->photo) }}" width="30"
                                                         alt="" style="border-radius: 60px;">
                                                 @endif
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <p class="mb-0 fw-normal">{{ $message->name }}</p>
+                                            <p class="mb-0 fw-normal">{{ $qoute->name }}</p>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <p class="mb-0 fw-normal">{{ $message->position }}</p>
+                                            <p class="mb-0 fw-normal">{{ $qoute->position }}</p>
                                         </td>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">{{ $message->message }}</h6>
+                                            <h6 class="fw-semibold mb-0">{{ $qoute->qoute }}</h6>
                                         </td>
                                     </tr>
                                 @endforeach
