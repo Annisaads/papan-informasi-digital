@@ -179,7 +179,10 @@ isi
 
 .announcement-contents {
     height: 400px;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 991px) {
@@ -257,13 +260,13 @@ isi
 .line-green {
     background-color: #284d3d;
     width: 1px;
-    height: 55px;
+    height: 100%;
 }
 
 .line-white {
     background-color: #fff;
     width: 1px;
-    height: 55px;
+    height: 100%;
 }
 
 .content-white {

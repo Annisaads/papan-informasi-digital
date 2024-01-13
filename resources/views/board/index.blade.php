@@ -9,7 +9,6 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
     <title>Papan Informasi Digital PT Semen Baturaja Tbk</title>
     <script src="{{ asset('js/script.js') }}"></script>
-
 </head>
 
 <body>
@@ -190,6 +189,31 @@
     </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var announcementContents = document.querySelector(".announcement-contents");
+
+            // Fungsi untuk scroll ke bawah otomatis dengan loop
+            function autoScroll() {
+                announcementContents.scrollTop += 1;
+
+                // Jika sudah mencapai akhir, reset ke atas
+                if (announcementContents.scrollTop >= announcementContents.scrollHeight - announcementContents.clientHeight) {
+                    announcementContents.scrollTop = 0;
+                }
+
+                // Panggil fungsi lagi
+                setTimeout(autoScroll, 80); // Ganti dengan nilai timeout yang sesuai
+            }
+
+            // Panggil fungsi autoScroll setelah halaman dimuat
+            autoScroll();
+        });
+    </script>
+
+
+
 </body>
 
 </html>
