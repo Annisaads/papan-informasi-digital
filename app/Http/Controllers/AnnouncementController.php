@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AnnouncementController extends Controller
 {
     public function index(){
-        $announcement = Announcement::latest()->first();
+        $announcement = Announcement::latest()->get();
         return view("dashboard.admin.announcement", compact("announcement"));
     }
 

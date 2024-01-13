@@ -37,49 +37,24 @@
                                             <div class="div-16"></div>
                                         </div>
 
-                                        <div class="div-17">
-                                            <div class="div-18"></div>
-                                            <div class="div-19">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore Ut
-                                                enim ad minim veniam, quis nostrud exercitation
-                                            </div>
-                                        </div>
-
-                                        <div class="div-20">
-                                            <div class="div-21"></div>
-                                            <div class="div-22">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore Ut
-                                                enim ad minim veniam, quis nostrud exercitation
-                                            </div>
-                                        </div>
-
-                                        <div class="div-23">
-                                            <div class="div-24"></div>
-                                            <div class="div-25">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore Ut
-                                                enim ad minim veniam, quis nostrud exercitation
-                                            </div>
-                                        </div>
-
-                                        <div class="div-26">
-                                            <div class="div-27"></div>
-                                            <div class="div-28">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore Ut
-                                                enim ad minim veniam, quis nostrud exercitation
-                                            </div>
-                                        </div>
-
-                                        <div class="div-29">
-                                            <div class="div-30"></div>
-                                            <div class="div-31">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit, sed do eiusmod tempor incididunt ut labore Ut
-                                                enim ad minim veniam, quis nostrud exercitation
-                                            </div>
+                                        <div class="announcement-contents">
+                                            @foreach ($announcements as $announcement)
+                                                @if ($loop->index % 2 == 0)
+                                                    <div class="bg-white">
+                                                        <div class="line-green"></div>
+                                                        <div class="content-green">
+                                                            {{ $announcement->announcement }}
+                                                        </div>
+                                                    </div>
+                                                    @else
+                                                    <div class="bg-green">
+                                                        <div class="line-white"></div>
+                                                        <div class="content-white">
+                                                            {{ $announcement->announcement }}
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -105,12 +80,14 @@
                                                 @forelse ($photo as $photo)
                                                     <div class="mySlides">
                                                         <img loading="lazy"
-                                                            src="{{ asset('storage') . '/' . $photo->photo }}" class="img-3" />
+                                                            src="{{ asset('storage') . '/' . $photo->photo }}"
+                                                            class="img-3" />
                                                     </div>
                                                 @empty
                                                     <div class="mySlides">
                                                         <img loading="lazy"
-                                                            src="{{ asset('img/Banner-Bersatu-Lebih-Kuat.jpg') }}" class="img-3" />
+                                                            src="{{ asset('img/Banner-Bersatu-Lebih-Kuat.jpg') }}"
+                                                            class="img-3" />
                                                     </div>
                                                 @endforelse
                                             </div>
@@ -123,22 +100,23 @@
                         <div class="div-33">
                             <div class="div-34">
                                 @if ($qoute)
-                                <img loading="lazy" srcset="{{ asset('storage') . '/' . $qoute->photo }}" class="img-4" />
-                                <div class="div-35">
-                                    <div class="div-36">
-                                        <div class="div-37">
-                                            {{ $qoute->name }}
+                                    <img loading="lazy" srcset="{{ asset('storage') . '/' . $qoute->photo }}"
+                                        class="img-4" />
+                                    <div class="div-35">
+                                        <div class="div-36">
+                                            <div class="div-37">
+                                                {{ $qoute->name }}
+                                            </div>
+                                            <div class="div-38"></div>
+                                            <div class="div-39">
+                                                {{ $qoute->position }}
+                                            </div>
                                         </div>
-                                        <div class="div-38"></div>
-                                        <div class="div-39">
-                                            {{ $qoute->position }}
+                                        <div class="div-40">
+                                            {{ $qoute->qoute }}
                                         </div>
                                     </div>
-                                    <div class="div-40">
-                                        {{ $qoute->qoute }}
-                                    </div>
-                                </div>
-                            @endif
+                                @endif
                             </div>
                         </div>
                     </div>

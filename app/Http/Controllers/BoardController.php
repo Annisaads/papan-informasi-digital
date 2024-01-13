@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Photo;
 use App\Models\Qoute;
 use App\Models\Video;
@@ -15,7 +16,8 @@ class BoardController extends Controller
         $qoute = Qoute::latest()->first();
         $profile = Profile::latest()->first();
         $video = Video::latest()->first();
-        return view('board.index', compact('profile', 'video', 'qoute', 'photo'));
+        $announcements= Announcement::latest()->get();
+        return view('board.index', compact('profile', 'video', 'qoute', 'photo', 'announcements'));
     }
 
 }

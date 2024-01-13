@@ -30,6 +30,7 @@
                 </div>
                 @if ($announcement != null)
                     <h5 class="card-title fw-semibold mb-4">Form Pengumuman</h5>
+
                     @if (session()->has('delete-success'))
                         <div class="alert alert-success alert-dismissible fade show mt-3">
                             <strong>Berhasil!</strong> {{ session('delete-success') }}
@@ -56,35 +57,38 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="border-bottom-0">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <form action="{{ route('announcement.delete', $announcement->id) }}" method="POST">
-                                                @csrf
-                                                @method('GET')
-                                                <button type="submit" style="background-color: #ffff; border: none;">
-                                                    <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
+                                @foreach ($announcement as $announcement)
+                                    <tr>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <form action="{{ route('announcement.delete', $announcement->id) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('GET')
+                                                    <button type="submit" style="background-color: #ffff; border: none;">
+                                                        <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                            alt="">
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button style="background-color: #ffff;border: none;">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                        alt="">
                                                 </button>
-                                            </form>
-                                        </div>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <button style="background-color: #ffff;border: none;">
-                                                <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                    alt="">
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">
-                                            @if ($announcement)
-                                                {{ $announcement->announcement }}
-                                            @endif
-                                        </h6>
-                                    </td>
-                                </tr>
-
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">
+                                                @if ($announcement)
+                                                    {{ $announcement->announcement }}
+                                                @endif
+                                            </h6>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

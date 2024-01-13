@@ -156,7 +156,7 @@ isi
     margin-left: 0px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 492px;
 }
 @media (max-width: 991px) {
     .column-2 {
@@ -175,6 +175,11 @@ isi
     flex-direction: column;
     margin: 0 auto;
     padding: 18px 0;
+}
+
+.announcement-contents {
+    height: 400px;
+    overflow-y: scroll;
 }
 
 @media (max-width: 991px) {
@@ -217,6 +222,60 @@ isi
 }
 
 .div-19 {
+    color: var(--Black, #222);
+    text-align: justify;
+    align-self: start;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.bg-green {
+    border-radius: 10px;
+    background-color: var(--Green-1, #284d3d);
+    justify-content: space-between;
+    align-self: center;
+    display: flex;
+    margin-top: 1rem;
+    gap: 10px;
+    padding: 8px 14px;
+    width: 90%;
+}
+
+.bg-white {
+    border-radius: 10px;
+    background-color: var(--White, #fff);
+    justify-content: space-between;
+    align-self: center;
+    display: flex;
+    margin-top: 1rem;
+    gap: 10px;
+    padding: 0px 14px;
+    width: 90%;
+}
+
+.line-green {
+    background-color: #284d3d;
+    width: 1px;
+    height: 55px;
+}
+
+.line-white {
+    background-color: #fff;
+    width: 1px;
+    height: 55px;
+}
+
+.content-white {
+    color: var(--White, #fff);
+    text-align: justify;
+    align-self: start;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 400 13px "Open Sans", sans-serif;
+}
+
+.content-green {
     color: var(--Black, #222);
     text-align: justify;
     align-self: start;

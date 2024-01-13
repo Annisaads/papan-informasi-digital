@@ -50,6 +50,9 @@
                                             </form>
                                         </div>
                                     </td>
+                                    <td>
+                                        <img src="{{ asset('storage') . '/' . $photo->photo }}" alt="{{ $photo->photo }}" width="120">
+                                    </td>
                                     <td class="border-bottom-0" style="width: 95%;">
                                         <h6 class="fw-semibold mb-0">{{ $photo->photo }}</h6>
                                     </td>
