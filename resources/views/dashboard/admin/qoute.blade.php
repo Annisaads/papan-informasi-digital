@@ -53,45 +53,12 @@
                             </div>
                         @endif
                     </div>
-                    <div class="table-responsive" style="max-height: 400px;">
+                    <div class="table-responsive">
                         <table class="table text-nowrap mb-0 align-middle">
-                            <thead class="text-dark fs-4">
-                                <tr>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0"></h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0"></h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Foto</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nama</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Jabatan</h6>
-                                    </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Pesan</h6>
-                                    </th>
-                                </tr>
-                            </thead>
+                            <thead class="text-dark fs-4"></thead>
                             <tbody>
                                 @foreach ($qoute as $qoute)
                                     <tr>
-                                        <td class="border-bottom-0">
-                                            <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('qoute.delete', $qoute->id) }}" method="POST">
-                                                    @csrf
-                                                    @method('GET')
-                                                    <button type="submit" style="background-color: #ffff; border: none;">
-                                                        <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                            alt="">
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
                                                 <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
@@ -101,80 +68,170 @@
                                                 </button>
                                             </div>
                                         </td>
-                                        <div class="modal fade" id="updateMessageModal{{ $qoute->id }}" tabindex="-1"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Ubah Pesan Tokoh</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form action="{{ route('qoute.update', $qoute->id) }}"
-                                                            method="POST" enctype="multipart/form-data">
-                                                            @csrf
-                                                            @method('POST')
-                                                            <div class="mb-3">
-                                                                <label for="updateName" class="form-label">Nama
-                                                                    Tokoh</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="updateName" name="name"
-                                                                    value="{{ $qoute->name }}">
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label for="updatePosition" class="form-label">Jabatan
-                                                                    Tokoh</label>
-                                                                <input type="text" class="form-control"
-                                                                    id="updatePosition" name="position"
-                                                                    value="{{ $qoute->position }}">
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label for="updateMessage" class="form-label">Pesan
-                                                                    Tokoh</label>
-                                                                <textarea class="form-control" id="updateMessage" name="qoute">{{ $qoute->qoute }}</textarea>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label for="updatePhoto" class="form-label">Foto
-                                                                    Tokoh</label>
-                                                                <input type="file" class="form-control"
-                                                                    id="updatePhoto" name="photo">
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Tutup</button>
-                                                                <button type="submit"
-                                                                    class="btn btn-primary ml-auto">Simpan</button>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                                        <td class="border-bottom-0" style="width: 95%;">
+                                            <div>
+                                                <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Foto Tokoh</h6>
+                                                <div class="d-flex align-items-center gap-2 mt-xl-1">
+                                                    @if ($qoute->photo)
+                                                        <img src="{{ asset('storage/' . $qoute->photo) }}" width="30"
+                                                            alt="" style="border-radius: 60px;">
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
+                                                    data-bs-target="#updateMessageModal{{ $qoute->id }}">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                        alt="">
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0" style="width: 95%;">
+                                            <div>
+                                                <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Nama Tokoh</h6>
+                                                <h6 class="fw-semibold mb-0">
+                                                    @if ($qoute)
+                                                        {{ $qoute->name }}
+                                                    @endif
+                                                </h6>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
+                                                    data-bs-target="#updateMessageModal{{ $qoute->id }}">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                        alt="">
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0" style="width: 95%;">
+                                            <div>
+                                                <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Jabatan Tokoh</h6>
+                                                <h6 class="fw-semibold mb-0">
+                                                    @if ($qoute)
+                                                        {{ $qoute->position }}
+                                                    @endif
+                                                </h6>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button style="background-color: #ffff;border: none;" data-bs-toggle="modal"
+                                                    data-bs-target="#updateMessageModal{{ $qoute->id }}">
+                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                        alt="">
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0" style="width: 95%;">
+                                            <div>
+                                                <h6 class="fw-semibold mb-0" style="color: #5d87ff;">Pesan Tokoh</h6>
+                                                <h6 class="fw-semibold mb-0">
+                                                    @if ($qoute)
+                                                        {{ $qoute->qoute }}
+                                                    @endif
+                                                </h6>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    {{-- <div class="modal fade" id="updateMessageModal{{ $qoute->id }}" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Ubah Pesan Tokoh</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="{{ route('qoute.update', $qoute->id) }}" method="POST"
+                                                        enctype="multipart/form-data">
+                                                        @csrf
+                                                        @method('POST')
+                                                        <div class="mb-3">
+                                                            <label for="updateName" class="form-label">Nama
+                                                                Tokoh</label>
+                                                            <input type="text" class="form-control" id="updateName"
+                                                                name="name" value="{{ $qoute->name }}">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="updatePosition" class="form-label">Jabatan
+                                                                Tokoh</label>
+                                                            <input type="text" class="form-control" id="updatePosition"
+                                                                name="position" value="{{ $qoute->position }}">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="updateMessage" class="form-label">Pesan
+                                                                Tokoh</label>
+                                                            <textarea class="form-control" id="updateMessage" name="qoute">{{ $qoute->qoute }}</textarea>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="updatePhoto" class="form-label">Foto
+                                                                Tokoh</label>
+                                                            <input type="file" class="form-control" id="updatePhoto"
+                                                                name="photo">
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Tutup</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary ml-auto">Simpan</button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
-                                        <td class="border-bottom-0">
-                                            <div class="d-flex align-items-center gap-2">
-                                                @if ($qoute->photo)
-                                                    <img src="{{ asset('storage/' . $qoute->photo) }}" width="30"
-                                                        alt="" style="border-radius: 60px;">
-                                                @endif
-                                            </div>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <p class="mb-0 fw-normal">{{ $qoute->name }}</p>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <p class="mb-0 fw-normal">{{ $qoute->position }}</p>
-                                        </td>
-                                        <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">{{ $qoute->qoute }}</h6>
-                                        </td>
-                                    </tr>
+                                    </div> --}}
+
+                                    {{-- <td class="border-bottom-0">
+                                        <div class="d-flex align-items-center gap-2">
+                                            @if ($qoute->photo)
+                                                <img src="{{ asset('storage/' . $qoute->photo) }}" width="30"
+                                                    alt="" style="border-radius: 60px;">
+                                            @endif
+                                        </div>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <p class="mb-0 fw-normal">{{ $qoute->name }}</p>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <p class="mb-0 fw-normal">{{ $qoute->position }}</p>
+                                    </td>
+                                    <td class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">{{ $qoute->qoute }}</h6>
+                                    </td>
+                                    </tr> --}}
                                 @endforeach
                             </tbody>
                         </table>
                     </div>
+                    <a href="{{ route('profile.delete.profile') }}">
+                        <button type="button" class="btn btn-danger mt-3">Hapus</button>
+                    </a>
                 @endif
             </div>
         </div>
     </div>
 @endsection
+
+{{-- <td class="border-bottom-0">
+    <div class="d-flex align-items-center gap-2">
+        <form action="{{ route('qoute.delete', $qoute->id) }}" method="POST">
+            @csrf
+            @method('GET')
+            <button type="submit" style="background-color: #ffff; border: none;">
+                <img src="/dashboard/assets/images/logos/trash.png" width="20" alt="">
+            </button>
+        </form>
+    </div>
+</td> --}}
