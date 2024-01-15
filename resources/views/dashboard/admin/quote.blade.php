@@ -17,6 +17,11 @@
                                 <strong>Berhasil!</strong> {{ session('delete-success') }}
                             </div>
                         @endif
+                        @if (session()->has('error'))
+                            <div class="alert alert-danger alert-dismissible fade show mt-3">
+                                <strong>Gagal!</strong> {{ session('error') }}
+                            </div>
+                        @endif
                         <form action="{{ route('quote.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">

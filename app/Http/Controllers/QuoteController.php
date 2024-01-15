@@ -26,6 +26,10 @@ class QuoteController extends Controller
             $path = $request->file('photo')->store('photos', 'public');
         }
 
+        if (Quote::count()>0){
+            return redirect()->route('quote.index')->with('error','Data sudah ada');
+        }
+
         Quote::create([
             'name' => $request->name,
             'position' => $request->position,
@@ -45,21 +49,27 @@ class QuoteController extends Controller
 
 
     public function updatePhoto(Request $request)
-    {
-        $request->validate([
-            'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+{
+    $request->validate([
+        'photo' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
 
+    $quote = Quote::first();
+
+    // Check if the record exists before attempting to update
+    if ($quote) {
         if ($request->hasFile('photo')) {
             $path = $request->file('photo')->store('photos', 'public');
 
-            $quote = Quote::find(1);
-            $quote->photo = $path;
-            $quote->save();
+            $quote->update(['photo' => $path]);
         }
 
         return redirect()->route('quote.index')->with('update-success', 'Foto tokoh berhasil diupdate');
+    } else {
+        return redirect()->route('quote.index')->with('update-fail', 'Data tidak ditemukan');
     }
+}
+
 
     public function updateName(Request $request){
         $quote = Quote::latest()->first();
