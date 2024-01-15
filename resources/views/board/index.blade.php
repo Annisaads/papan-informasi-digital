@@ -5,8 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="300">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-    <link rel="shortcut icon" type="image/png" href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
+    <link rel="shortcut icon" type="image/png"
+        href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
     <title>Papan Informasi Digital PT Semen Baturaja Tbk</title>
     <script src="{{ asset('js/script.js') }}"></script>
 </head>
@@ -45,7 +47,7 @@
                                                             {{ $announcement->announcement }}
                                                         </div>
                                                     </div>
-                                                    @else
+                                                @else
                                                     <div class="bg-green">
                                                         <div class="line-white"></div>
                                                         <div class="content-white">
@@ -191,7 +193,7 @@
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var announcementContents = document.querySelector(".announcement-contents");
 
             // Fungsi untuk scroll ke bawah otomatis dengan loop
@@ -199,7 +201,8 @@
                 announcementContents.scrollTop += 1;
 
                 // Jika sudah mencapai akhir, reset ke atas
-                if (announcementContents.scrollTop >= announcementContents.scrollHeight - announcementContents.clientHeight) {
+                if (announcementContents.scrollTop >= announcementContents.scrollHeight - announcementContents
+                    .clientHeight) {
                     announcementContents.scrollTop = 0;
                 }
 
@@ -211,9 +214,6 @@
             autoScroll();
         });
     </script>
-
-
-
 </body>
 
 </html>
