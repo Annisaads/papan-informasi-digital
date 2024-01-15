@@ -23,11 +23,15 @@ class ProfileController extends Controller
         Profile::create($data);
         return redirect()->route('profile.index')->with('success','Data berhasil disimpan');
     }
-    public function deleteProfile(){
+    public function deleteProfile() {
         $profile = Profile::latest()->first();
-        $profile->delete();
 
-        return redirect()->route('profile.index')->with('delete-success','Profil berhasil dihapus');
+        if ($profile) {
+            $profile->delete();
+            return redirect()->route('profile.index')->with('delete-success', 'Profil berhasil dihapus');
+        } else {
+            return redirect()->route('profile.index')->with('delete-error', 'Tidak ada profil yang ditemukan untuk dihapus');
+        }
     }
 
     public function updateDescription(Request $request){

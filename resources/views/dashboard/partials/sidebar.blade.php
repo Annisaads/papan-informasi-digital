@@ -92,7 +92,7 @@
           <li class="sidebar-item">
             <a
               class="sidebar-link"
-              href="{{route('qoute.index')}}"
+              href="{{route('quote.index')}}"
               aria-expanded="false"
             >
               <span>

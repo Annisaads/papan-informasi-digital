@@ -98,21 +98,21 @@
 
                         <div class="div-33">
                             <div class="div-34">
-                                @if ($qoute)
-                                    <img loading="lazy" srcset="{{ asset('storage') . '/' . $qoute->photo }}"
+                                @if ($quote)
+                                    <img loading="lazy" srcset="{{ asset('storage') . '/' . $quote->photo }}"
                                         class="img-4" />
                                     <div class="div-35">
                                         <div class="div-36">
                                             <div class="div-37">
-                                                {{ $qoute->name }}
+                                                {{ $quote->name }}
                                             </div>
                                             <div class="div-38"></div>
                                             <div class="div-39">
-                                                {{ $qoute->position }}
+                                                {{ $quote->position }}
                                             </div>
                                         </div>
                                         <div class="div-40">
-                                            {{ $qoute->qoute }}
+                                            {{ $quote->quote }}
                                         </div>
                                     </div>
                                 @endif

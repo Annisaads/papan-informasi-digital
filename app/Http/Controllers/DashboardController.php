@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
-use App\Models\Qoute;
+use App\Models\Quote;
 use App\Models\Video;
 use App\Models\Profile;
 use App\Models\Announcement;
@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
     public function index(){
         $jumlahPengumuman = Announcement::count();
-        $jumlahPesanTokoh = Qoute::count();
+        $jumlahPesanTokoh = Quote::count();
         $jumlahFoto = Photo::count();
         $jumlahVideo = Video::count();
         $jumlahProfil = Profile::count();
