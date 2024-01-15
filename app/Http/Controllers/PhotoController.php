@@ -26,9 +26,13 @@ class PhotoController extends Controller
         return redirect()->route('photo.index')->with('success','Foto berhasil disimpan');
     }
     public function delete(){
-        $photo = Photo::latest()->first();
+        $photo = Photo::first();
+    if($photo) {
         Storage::disk('public')->delete($photo->photo);
         $photo->delete();
         return redirect()->route('photo.index')->with('delete-success','Foto berhasil dihapus');
+    } else {
+        return redirect()->route('photo.index')->with('delete-error','Tidak ada foto untuk dihapus');
     }
+}
 }

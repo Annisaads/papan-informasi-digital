@@ -28,7 +28,7 @@
                         </form>
                     </div>
                 </div>
-                @if ($announcement != null)
+                @if ($announcement != null && count($announcement) > 0)
                     <h5 class="card-title fw-semibold mb-4">Form Pengumuman</h5>
 
                     @if (session()->has('delete-success'))
@@ -74,10 +74,15 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <button style="background-color: #ffff;border: none;">
-                                                    <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                        alt="">
-                                                </button>
+                                                <form action="{{ route('announcement.update', $announcement->id) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <button type="submit" style="background-color: #ffff; border: none;">
+                                                        <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                            alt="">
+                                                    </button>
+                                                </form>
                                             </div>
                                         </td>
                                         <td class="border-bottom-0">
