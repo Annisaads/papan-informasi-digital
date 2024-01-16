@@ -840,7 +840,7 @@ isi
 .div-63 {
     color: var(--Black, #222);
     white-space: nowrap;
-    font: 300 11px "Open Sans", sans-serif;
+    font: 300 10px "Open Sans", sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -882,23 +882,19 @@ isi
 .slideshow-container {
     max-width: 600px;
     overflow: hidden;
-  }
+}
 
-  .slide-frame {
+.slide-frame {
     display: flex;
     transition: transform 1s ease;
-  }
+}
 
-  .mySlides {
+.mySlides {
     flex: 0 0 100%;
     box-sizing: border-box;
-  }
+}
 
-  .img-3 {
+.img-3 {
     width: 100%;
     height: auto;
-  }
-
-
-
-
+}
