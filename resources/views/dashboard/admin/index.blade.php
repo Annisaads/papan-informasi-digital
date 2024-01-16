@@ -2,7 +2,7 @@
 
 @section('content')
     <h3 class="mb-0 pt-4 fw-semibold p-1" style="color: #5d87ff;">Selamat datang kembali, Admin!</h3>
-    <p class="pb-4 fw-normal p-1">Perbarui papan informasi digital PT Semen Baturaja Tbk setiap hari :D
+    <p class="pb-4 fw-normal p-1">Perbarui panel informasi elektronik PT Semen Baturaja Tbk setiap hari :D
     </p>
 
     <!--  Cuaca -->
@@ -11,8 +11,8 @@
             <div id="weather-container">
             </div>
             <iframe id="tradingview-widget"
-                src="https://embed.windy.com/embed2.html?lat=-3.332&lon=104.700&detailLat=-3.209&detailLon=104.700&width=600&height=450&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=%C2%B0C&radarRange=-1" width="600"
-                class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
+                src="https://embed.windy.com/embed2.html?lat=-3.332&lon=104.700&detailLat=-3.209&detailLon=104.700&width=600&height=450&zoom=10&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=true&metricWind=default&metricTemp=%C2%B0C&radarRange=-1"
+                width="600" class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
                 style="width: 100%; height:330px">
             </iframe>
         </div>
@@ -30,7 +30,8 @@
                                 Jumlah Pengumuman
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahPengumuman }}</h3>
+                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">
+                                    {{ $jumlahPengumuman }}</h3>
                             </div>
                         </div>
                     </div>
@@ -45,7 +46,8 @@
                                 Jumlah Pesan Tokoh
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahPesanTokoh }}</h3>
+                                <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">
+                                    {{ $jumlahPesanTokoh }}</h3>
                             </div>
                         </div>
                     </div>
@@ -77,7 +79,7 @@
                     </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Profil</h6>
                     <div class="card-body">
-                       <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahProfil }}</h3>
+                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahProfil }}</h3>
                     </div>
                 </div>
             </div>
