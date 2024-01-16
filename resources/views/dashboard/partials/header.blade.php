@@ -19,7 +19,8 @@
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="my-1">
                 <h5 class="mb-1 fw-semibold mt-1">Padimen</h5>
-                <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Papan Informasi Digital PT Semen Baturaja
+                <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Panel Informasi Elektronik PT Semen
+                    Baturaja
                     Tbk</p>
             </div>
 
