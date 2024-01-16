@@ -125,8 +125,8 @@
 
                 <div class="column-4">
                     <div class="div-41">
+                        <div class="div-43">Profil Perusahaan</div>
                         <div class="div-42">
-                            <div class="div-43">Profil Perusahaan</div>
                             <div class="div-44">
                                 @if ($profile)
                                     {{ $profile->description }}
