@@ -196,21 +196,17 @@
         document.addEventListener("DOMContentLoaded", function() {
             var announcementContents = document.querySelector(".announcement-contents");
 
-            // Fungsi untuk scroll ke bawah otomatis dengan loop
             function autoScroll() {
                 announcementContents.scrollTop += 1;
 
-                // Jika sudah mencapai akhir, reset ke atas
                 if (announcementContents.scrollTop >= announcementContents.scrollHeight - announcementContents
                     .clientHeight) {
                     announcementContents.scrollTop = 0;
                 }
 
-                // Panggil fungsi lagi
-                setTimeout(autoScroll, 80); // Ganti dengan nilai timeout yang sesuai
+                setTimeout(autoScroll, 80);
             }
 
-            // Panggil fungsi autoScroll setelah halaman dimuat
             autoScroll();
         });
     </script>
