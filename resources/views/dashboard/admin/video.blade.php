@@ -26,6 +26,9 @@
                                 @error('video')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
+                                <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Masukan video dengan rasio
+                                    16:9 dan maksimal file 100
+                                    MB.</p>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
