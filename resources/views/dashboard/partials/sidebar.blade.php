@@ -45,7 +45,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('cerita.index') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('story.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-cards"></i>
                         </span>
@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('profile.index') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('announcement.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
                         </span>
@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ route('quote.index') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ route('news.index') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-article"></i>
                         </span>

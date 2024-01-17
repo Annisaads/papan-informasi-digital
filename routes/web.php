@@ -1,19 +1,21 @@
 <?php
 
+use App\Models\Qoute;
 use App\Models\Video;
 use App\Models\Message;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\QouteController;
+use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\StoryController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\QouteController;
-use App\Http\Controllers\QuoteController;
-use App\Models\Qoute;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -40,6 +42,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
     Route::get('/dashboard-admin/pengumuman', [AnnouncementController::class, 'index'])->name('announcement.index');
     Route::get('/dashboard-admin/pesan-tokoh', [QuoteController::class, 'index'])->name('quote.index');
+    Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
+    Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
     Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
     Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
     Route::post('/dashboard-admin/profil/edit-deskripsi', [ProfileController::class,'updateDescription'])->name('profile.update.description');

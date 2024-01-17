@@ -30,14 +30,12 @@
                         </form>
                     </div>
                 </div>
-                @if ($photo->isNotEmpty())
-                    <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
+                    {{-- <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
                     <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
                             </thead>
                             <tbody>
-                                @foreach ($photo as $photo)
                                     <tr>
                                         <td class="border-bottom-0" style="width: 5%;">
                                             <div class="d-flex align-items-center gap-2">
@@ -59,11 +57,9 @@
                                             <h6 class="fw-semibold mb-0">{{ $photo->photo }}</h6>
                                         </td>
                                     </tr>
-                                @endforeach
                             </tbody>
                         </table>
-                    </div>
-                @endif
+                    </div> --}}
             </div>
         </div>
     </div>
