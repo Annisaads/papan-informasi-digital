@@ -37,13 +37,13 @@
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <!-- Pesan Tokoh -->
+                    <!-- Berita -->
                     <div class="card-body p-2">
                         <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
-                                href="{{ route('quote.index') }}">Pesan Tokoh</a></h5>
+                                href="{{ route('quote.index') }}">Berita</a></h5>
                         <div class="card">
                             <div class="card-header">
-                                Jumlah Pesan Tokoh
+                                Jumlah Berita
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">
@@ -75,9 +75,9 @@
             <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold" style="color: #5d87ff;">
-                        <a href="{{ route('profile.index') }}">Profil</a>
+                        <a href="{{ route('profile.index') }}">Cerita</a>
                     </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Jumlah Profil</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Jumlah Cerita</h6>
                     <div class="card-body">
                         <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahProfil }}</h3>
                     </div>
