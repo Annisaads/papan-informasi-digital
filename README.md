@@ -29,7 +29,7 @@
         
 - Jalankan migrasi database (Atur koneksi database di .env sebelum melakukan migrasi)
 
-      php artisan migrate --seed
+      php artisan migrate:fresh --seed
 
 - Buat symbolic link
 
