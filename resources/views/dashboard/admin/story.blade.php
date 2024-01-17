@@ -17,12 +17,12 @@
                                 <strong>Berhasil!</strong> {{ session('delete-success') }}
                             </div>
                         @endif
-                        <form action="{{ route('photo.create') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('story.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Foto</label>
-                                <input type="file" name="photo" id="disabledTextInput" class="form-control"></input>
-                                @error('photo')
+                                <input type="file" name="story" id="disabledTextInput" class="form-control"></input>
+                                @error('story')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                                 <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Masukan foto dengan rasio
@@ -34,8 +34,8 @@
                     </div>
                 </div>
                 <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
-                <div class="table-responsive" style="max-height: 300px;">
-                    @if ($story != null)
+                @if ($story != null)
+                    <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
                             </thead>
@@ -55,20 +55,20 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <img src="{{ asset('storage') . '/' . $story->photo }}"
-                                                alt="{{ $story->photo }}" width="120">
+                                            <img src="{{ asset('storage') . '/' . $story->story }}"
+                                                alt="{{ $story->story }}" width="120">
                                         </td>
                                         <td class="border-bottom-0" style="width: 95%;">
-                                            <h6 class="fw-semibold mb-0">{{ $story->photo }}</h6>
+                                            <h6 class="fw-semibold mb-0">{{ $story->story }}</h6>
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                    @else
-                        <p>Tidak ada cerita tersedia.</p>
-                    @endif
-                </div>
+                    </div>
+                @else
+                    <p>Tidak ada cerita tersedia.</p>
+                @endif
             </div>
         </div>
     </div>

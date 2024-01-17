@@ -23,7 +23,7 @@
                                 <label for="exampleInputPassword1" class="form-label">Foto</label>
                                 <input type="file" name="photo" id="disabledTextInput" class="form-control"></input>
                                 @error('photo')
-                                    <div class="invalid-feedback">{{ $message }}</div>
+                                    <div class="invalid-feedback">{{ $photo }}</div>
                                 @enderror
                                 <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Masukan foto dengan rasio
                                     21:9 dan maksimal file 10

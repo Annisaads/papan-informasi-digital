@@ -66,5 +66,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/pesan-tokoh/edit-nama-tokoh', [QuoteController::class,'updateName'])->name('quote.update.name');
     Route::post('/dashboard-admin/pesan-tokoh/edit-jabatan-tokoh', [QuoteController::class,'updatePosition'])->name('quote.update.position');
     Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh', [QuoteController::class,'updateQoute'])->name('quote.update.quote');
+    Route::post('/dashboard-admin/cerita/tambah-cerita', [StoryController::class,'create'])->name('story.create');
+    Route::get('/dashboard-admin/cerita/hapus-foto/{id}', [StoryController::class,'delete'])->name('story.delete');
 
 });
