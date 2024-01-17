@@ -74,6 +74,19 @@
                     <span class="hide-menu"></span>
                 </li>
                 <li class="sidebar-item">
+                    <a class="sidebar-link" href="" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-alert-circle"></i>
+                        </span>
+                        <span class="hide-menu">Refresh Panel</span>
+                    </a>
+                </li>
+
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu"></span>
+                </li>
+                <li class="sidebar-item">
                     <a href="{{ route('logout') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Keluar</a>
                 </li>
             </ul>
