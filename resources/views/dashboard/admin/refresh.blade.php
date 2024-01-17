@@ -17,12 +17,17 @@
                                 <strong>Gagal!</strong> {{ session('error') }}
                             </div>
                         @endif
-                        <form action="{{ route('announcement.create') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('refresh.update') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Angka</label>
-                                <input name="announcement" type="text" id="disabledTextInput" class="form-control"
-                                    placeholder="Tambahkan menit"></input>
+                                <label for="exampleInputPassword1" class="form-label">Pilih Waktu Refresh</label>
+                                <select class="form-select" name="refresh" aria-label="Default select example">
+                                    @foreach($refreshes as $refresh)
+                                        <option value="{{ $refresh->id }}" {{ $refresh->is_selected ? 'selected' : '' }}>
+                                            {{ $refresh->refresh }}
+                                        </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>

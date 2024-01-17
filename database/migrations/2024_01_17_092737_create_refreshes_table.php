@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('refreshes', function (Blueprint $table) {
             $table->id();
             $table->integer('refresh')->nullable();
+            $table->boolean('is_selected')->default(0);
             $table->timestamps();
         });
     }

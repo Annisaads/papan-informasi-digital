@@ -17,6 +17,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnouncementController;
+use App\Models\Refresh;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -68,5 +69,5 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh', [QuoteController::class,'updateQoute'])->name('quote.update.quote');
     Route::post('/dashboard-admin/cerita/tambah-cerita', [StoryController::class,'create'])->name('story.create');
     Route::get('/dashboard-admin/cerita/hapus-foto/{id}', [StoryController::class,'delete'])->name('story.delete');
-
+    Route::post('/dashboard-admin/refresh', [RefreshController::class,'update'])->name('refresh.update');
 });

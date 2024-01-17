@@ -6,6 +6,7 @@ use App\Models\Photo;
 use App\Models\Quote;
 use App\Models\Video;
 use App\Models\Profile;
+use App\Models\Refresh;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,8 @@ class BoardController extends Controller
         $profile = Profile::latest()->first();
         $video = Video::latest()->first();
         $announcements= Announcement::latest()->get();
-        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcements'));
+        $refresh = Refresh::where('is_selected', 1)->first();
+        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcements', 'refresh'));
     }
 
 }
