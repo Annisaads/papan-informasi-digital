@@ -33,8 +33,8 @@
                         </form>
                     </div>
                 </div>
+                <h5 class="card-title mb-9 fw-semibold">Form Foto Perusahaan</h5>
                 @if ($photo->isNotEmpty())
-                    <h5 class="card-title mb-9 fw-semibold">Form Foto Perusahaan</h5>
                     <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
@@ -66,6 +66,8 @@
                             </tbody>
                         </table>
                     </div>
+                @else
+                    <p>Tidak ada foto tersedia.</p>
                 @endif
             </div>
         </div>

@@ -33,16 +33,18 @@
                         </form>
                     </div>
                 </div>
-                {{-- <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
-                    <div class="table-responsive" style="max-height: 300px;">
+                <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
+                <div class="table-responsive" style="max-height: 300px;">
+                    @if ($story != null)
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
                             </thead>
                             <tbody>
+                                @foreach ($story as $story)
                                     <tr>
                                         <td class="border-bottom-0" style="width: 5%;">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('photo.delete', $photo->id) }}" method="POST">
+                                                <form action="{{ route('story.delete', $story->id) }}" method="POST">
                                                     @csrf
                                                     @method('GET')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
@@ -53,16 +55,20 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <img src="{{ asset('storage') . '/' . $photo->photo }}"
-                                                alt="{{ $photo->photo }}" width="120">
+                                            <img src="{{ asset('storage') . '/' . $story->photo }}"
+                                                alt="{{ $story->photo }}" width="120">
                                         </td>
                                         <td class="border-bottom-0" style="width: 95%;">
-                                            <h6 class="fw-semibold mb-0">{{ $photo->photo }}</h6>
+                                            <h6 class="fw-semibold mb-0">{{ $story->photo }}</h6>
                                         </td>
                                     </tr>
+                                @endforeach
                             </tbody>
                         </table>
-                    </div> --}}
+                    @else
+                        <p>Tidak ada cerita tersedia.</p>
+                    @endif
+                </div>
             </div>
         </div>
     </div>

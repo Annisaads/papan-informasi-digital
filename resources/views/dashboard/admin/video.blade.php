@@ -34,8 +34,8 @@
                         </form>
                     </div>
                 </div>
+                <h5 class="card-title mb-9 fw-semibold">Form Video</h5>
                 @if ($video != null)
-                    <h5 class="card-title mb-9 fw-semibold">Form Video</h5>
                     <div class="table-responsive">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
@@ -58,6 +58,8 @@
                             </tbody>
                         </table>
                     </div>
+                @else
+                    <p>Tidak ada video tersedia.</p>
                 @endif
             </div>
         </div>

@@ -28,9 +28,8 @@
                         </form>
                     </div>
                 </div>
+                <h5 class="card-title fw-semibold mb-4">Form Pengumuman</h5>
                 @if ($announcement != null && count($announcement) > 0)
-                    <h5 class="card-title fw-semibold mb-4">Form Pengumuman</h5>
-
                     @if (session()->has('delete-success'))
                         <div class="alert alert-success alert-dismissible fade show mt-3">
                             <strong>Berhasil!</strong> {{ session('delete-success') }}
@@ -97,6 +96,8 @@
                             </tbody>
                         </table>
                     </div>
+                @else
+                    <p>Tidak ada pengumuman tersedia.</p>
                 @endif
             </div>
         </div>
