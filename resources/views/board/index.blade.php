@@ -16,14 +16,13 @@
 <body>
     <div class="div">
         <div class="div-2">
-            <div class="div-3"></div>
             <img loading="lazy" srcset="{{ asset('img/logo-ptsb.png') }}" class="img" />
             <div class="div-4">
                 <div class="div-5">PT Semen Baturaja Tbk</div>
                 <div class="div-6">Kokoh dan Tahan Lamo</div>
             </div>
-            <div class="div-7"></div>
         </div>
+        <div class="div-3"></div>
 
         <div class="div-8">
             <div class="div-9">
@@ -167,7 +166,7 @@
                             <iframe id="tradingview-widget"
                                 src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=id#%7B%22symbol%22%3A%22IDX%3ASMBR%22%2C%22frameElementId%22%3A%22tradingview_adbaa%22%2C%22interval%22%3A%22D%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22semenbaturaja.co.id%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22IDX%3ASMBR%22%2C%22page-uri%22%3A%22semenbaturaja.co.id%2Finvestor-informasi-saham-obligasi%2F%23top%22%7D"
                                 class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
-                                styel= "width": 100%; height="234px"></iframe>
+                                style= "width": 100%; height="234px"></iframe>
                         </div>
                         <div class="div-59">
                             <div class="div-60">
