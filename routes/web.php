@@ -14,6 +14,7 @@ use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnouncementController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -44,6 +45,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/pesan-tokoh', [QuoteController::class, 'index'])->name('quote.index');
     Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
     Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
+    Route::get('/dashboard-admin/refresh', [RefreshController::class, 'index'])->name('refresh.index');
     Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
     Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
     Route::post('/dashboard-admin/profil/edit-deskripsi', [ProfileController::class,'updateDescription'])->name('profile.update.description');
