@@ -25,12 +25,15 @@
                                 @error('photo')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
+                                <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Masukan foto dengan rasio
+                                    9:16 dan maksimal file 10
+                                    MB.</p>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>
-                    {{-- <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
+                {{-- <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
                     <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">

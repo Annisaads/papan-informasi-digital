@@ -15,15 +15,6 @@
 
 <body>
     <div class="div">
-        <div class="div-2">
-            <img loading="lazy" srcset="{{ asset('img/logo-ptsb.png') }}" class="img" />
-            <div class="div-4">
-                <div class="div-5">PT Semen Baturaja Tbk</div>
-                <div class="div-6">Kokoh dan Tahan Lamo</div>
-            </div>
-        </div>
-        <div class="div-3"></div>
-
         <div class="div-8">
             <div class="div-9">
                 <div class="column">
