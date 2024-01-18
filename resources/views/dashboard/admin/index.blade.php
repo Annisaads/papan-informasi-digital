@@ -47,7 +47,7 @@
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">
-                                    {{ $jumlahPesanTokoh }}</h3>
+                                    {{ $jumlahBerita }}</h3>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                     </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Cerita</h6>
                     <div class="card-body">
-                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahProfil }}</h3>
+                        <h3 class="card-title fw-bolder" style="color: #5d87ff; text-align:center;">{{ $jumlahCerita }}</h3>
                     </div>
                 </div>
             </div>
