@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="{{$refresh->refresh}}">
+    <meta http-equiv="refresh" content="{{ $refresh->refresh }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="shortcut icon" type="image/png"
         href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
@@ -22,32 +22,8 @@
                         <div class="div-11">
                             <div class="div-12">
                                 <div class="column-2">
-                                    <div class="div-13">
-                                        <div class="div-14">
-                                            <div class="div-15">Pengumuman</div>
-                                            <div class="div-16"></div>
-                                        </div>
-
-                                        <div class="announcement-contents">
-                                            @foreach ($announcements as $announcement)
-                                                @if ($loop->index % 2 == 0)
-                                                    <div class="bg-white">
-                                                        <div class="line-green"></div>
-                                                        <div class="content-green">
-                                                            {{ $announcement->announcement }}
-                                                        </div>
-                                                    </div>
-                                                @else
-                                                    <div class="bg-green">
-                                                        <div class="line-white"></div>
-                                                        <div class="content-white">
-                                                            {{ $announcement->announcement }}
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                            @endforeach
-                                        </div>
-                                    </div>
+                                    <img src="{{ asset('img/cerita-1.jpg') }}" class="div-13">
+                                    </img>
                                 </div>
 
                                 <div class="column-3">
@@ -83,31 +59,13 @@
                                                 @endforelse
                                             </div>
                                         </div>
+                                        <div class="div-33">
+                                            <div class="div-40">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dot</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="div-33">
-                            <div class="div-34">
-                                @if ($quote)
-                                    <img loading="lazy" srcset="{{ asset('storage') . '/' . $quote->photo }}"
-                                        class="img-4" />
-                                    <div class="div-35">
-                                        <div class="div-36">
-                                            <div class="div-37">
-                                                {{ $quote->name }}
-                                            </div>
-                                            <div class="div-38"></div>
-                                            <div class="div-39">
-                                                {{ $quote->position }}
-                                            </div>
-                                        </div>
-                                        <div class="div-40">
-                                            {{ $quote->quote }}
-                                        </div>
-                                    </div>
-                                @endif
                             </div>
                         </div>
                     </div>
@@ -115,49 +73,39 @@
 
                 <div class="column-4">
                     <div class="div-41">
-                        <div class="div-43">Profil Perusahaan</div>
-                        <div class="div-42">
-                            <div class="div-44">
-                                @if ($profile)
-                                    {{ $profile->description }}
-                                @endif
-                            </div>
-
-                            <div class="div-45">
-                                <div class="div-46">
-                                    <div class="div-47">
-                                        @if ($profile)
-                                            {{ $profile->website_url }}
-                                        @endif
-                                    </div>
-                                    <div class="div-48">
-                                        Contact
-                                        @if ($profile)
-                                            {{ $profile->phone_number }}
-                                        @endif
-                                    </div>
+                        <div class="div-43">Pengumuman</div>
+                        <div class="column-5">
+                            <div class="div-42">
+                                <div class="div-44">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
                                 </div>
-                                <div class="div-49">
-                                    <div class="div-50">
-                                        <img loading="lazy" srcset="{{ asset('img/logo-ig.png') }}" class="img-5" />
-                                        <img loading="lazy" srcset="{{ asset('img/logo-fb.png') }}" class="img-6" />
-                                        <img loading="lazy" srcset="{{ asset('img/logo-x.png') }}" class="img-7" />
-                                        <img loading="lazy" srcset="{{ asset('img/logo-ytb.png') }}" class="img-8" />
-                                    </div>
-                                    <div class="div-51">
-                                        @if ($profile)
-                                            {{ $profile->social_media }}
-                                        @endif
-                                    </div>
+                            </div>
+                            <div class="div-42">
+                                <div class="div-44">
+                                    Incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
+                                </div>
+                            </div>
+                            <div class="div-42">
+                                <div class="div-44">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
+                                </div>
+                            </div>
+                            <div class="div-42">
+                                <div class="div-44">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="div-52">
                             <iframe id="tradingview-widget"
                                 src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=id#%7B%22symbol%22%3A%22IDX%3ASMBR%22%2C%22frameElementId%22%3A%22tradingview_adbaa%22%2C%22interval%22%3A%22D%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%221%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22semenbaturaja.co.id%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22IDX%3ASMBR%22%2C%22page-uri%22%3A%22semenbaturaja.co.id%2Finvestor-informasi-saham-obligasi%2F%23top%22%7D"
                                 class="tradingview-widget" frameborder="0" allowtransparency="true" scrolling="no"
-                                style= "width": 100%; height="234px"></iframe>
+                                style= "width": 100%; height="165px"></iframe>
                         </div>
                         <div class="div-59">
                             <div class="div-60">

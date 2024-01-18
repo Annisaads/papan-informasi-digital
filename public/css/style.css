@@ -3,7 +3,7 @@
 .div {
     display: flex;
     width: auto;
-    height: auto;
+    height: 668px;
     padding: 18px;
     flex-direction: column;
     justify-content: center;
@@ -106,16 +106,12 @@ isi
 }
 
 .div-13 {
-    justify-content: top;
-    border-radius: 10px;
-    box-shadow: 4px 5px 8px 0px rgba(204, 204, 204, 0.7);
-    background-color: var(--White, #fff);
-    display: flex;
+    /* aspect-ratio: 2.69; */
+    object-fit: contain;
+    object-position: center;
     width: 100%;
-    flex-grow: 1;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 18px 0;
+    overflow: hidden;
+    height: auto;
 }
 
 .announcement-contents {
@@ -328,7 +324,7 @@ isi
 }
 
 .div-32 {
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -336,7 +332,7 @@ isi
 }
 
 .img-2 {
-    aspect-ratio: 1.79;
+    /* aspect-ratio: 1.79; */
     object-fit: contain;
     object-position: center;
     width: 100%;
@@ -344,25 +340,19 @@ isi
 }
 
 .img-3 {
-    aspect-ratio: 2.69;
+    /* aspect-ratio: 2.69; */
     object-fit: contain;
     object-position: center;
     width: 100%;
     overflow: hidden;
-    margin-top: 18px;
     height: auto;
 }
 
 .div-33 {
-    justify-content: center;
-    border-radius: 10px;
-    border: 1px solid var(--Red, #9f1014);
-    background-color: var(--White, #fff);
-    display: flex;
-    margin-top: 18px;
-    flex-direction: column;
-    padding: 8px 19px;
-    height: 100%;
+    background-color: var(--White, #9f1014);
+    width: 100%;
+    height: 52px;
+    box-shadow: 4px 5px 8px 0px rgba(204, 204, 204, 0.7);
 }
 
 .div-34 {
@@ -419,11 +409,9 @@ isi
 }
 
 .div-40 {
-    color: var(--Black, #222);
-    align-self: stretch;
-    margin-top: 4px;
-    font: 300 10px "Open Sans", sans-serif;
-    text-align: justify;
+    color: var(--Black, #fff);
+    font: 600 15px "Open Sans", sans-serif;
+    padding: 0 10px;
 }
 
 .column-4 {
@@ -437,44 +425,56 @@ isi
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.column-5 {
+    justify-content: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    height: 230px;
+    gap: 10px;
+    overflow: hidden;
 }
 
 .div-42 {
-    padding-bottom: 12px;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 4px 5px 8px 0px rgba(204, 204, 204, 0.7);
+    border-radius: 10px;
     background-color: var(--White, #fff);
     display: flex;
     width: 100%;
     flex-direction: column;
+    border-bottom: 2px solid var(--Red, #808080);
 }
 
 .div-43 {
     color: var(--White, #fff);
+    box-shadow: 4px 5px 8px 0px rgba(204, 204, 204, 0.7);
     text-align: center;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     background-color: var(--Green-1, #284d3d);
     align-self: stretch;
-    padding: 6px 13px;
+    padding: 9px;
     font: 700 20px "Open Sans", sans-serif;
     width: auto;
+    border-bottom: 2px solid var(--Red, #808080);
 }
 
 .div-44 {
     color: var(--Black, #222);
-    margin-top: 16px;
     font: 400 10px "Open Sans", sans-serif;
-    padding: 0 14px;
     width: auto;
     text-align: justify;
     height: auto;
+    padding: 10px;
 }
 
 .div-45 {
@@ -576,7 +576,7 @@ isi
 .div-52 {
     justify-content: center;
     border-radius: 10px;
-    border: 1px solid var(--Red, #9f1014);
+    border: 2px solid var(--Red, #00491c);
     background-color: var(--White, #fff);
     display: flex;
     margin-top: auto;
@@ -663,7 +663,7 @@ isi
 .div-63 {
     color: var(--Black, #222);
     white-space: nowrap;
-    font: 300 10px "Open Sans", sans-serif;
+    font: 300 9px "Open Sans", sans-serif;
 }
 
 .div-64 {
