@@ -73,13 +73,12 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('announcement.update', $announcement->id) }}"
-                                                    method="POST">
+                                                <form action="{{ route('announcement.update', $announcement->id) }}" method="POST">
                                                     @csrf
                                                     @method('POST')
-                                                    <button type="submit" style="background-color: #ffff; border: none;">
-                                                        <img src="/dashboard/assets/images/logos/pencil.png" width="20"
-                                                            alt="">
+                                                    <button type="button" style="background-color: #ffff; border: none;"
+                                                        data-bs-target="#announcementModal{{ $announcement->id }}" data-bs-toggle="modal">
+                                                        <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
                                                     </button>
                                                 </form>
                                             </div>
@@ -92,6 +91,30 @@
                                             </h6>
                                         </td>
                                     </tr>
+                                    <div class="modal fade" id="announcementModal{{ $announcement->id }}" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ubah Pengumuman
+                                                    </h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <form action="{{ route('announcement.update', $announcement->id) }}" method="POST">
+                                                    <div class="modal-body">
+                                                        @csrf
+                                                        <input type="text" name="announcement" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" value="{{ $announcement->news }}">
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Tutup</button>
+                                                        <button type="submit" class="btn btn-primary">Simpan</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endforeach
                             </tbody>
                         </table>

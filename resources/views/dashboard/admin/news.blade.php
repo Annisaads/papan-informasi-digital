@@ -65,23 +65,25 @@
                                                     </button>
                                                 </form>
                                             </div>
-                                            <td class="border-bottom-0">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <form action="{{ route('news.update', $singleNews->id) }}" method="POST">
-                                                        @csrf
-                                                        @method('POST')
-                                                        <button type="button" style="background-color: #ffff; border: none;"
-                                                            data-bs-target="#newsModal{{ $singleNews->id }}" data-bs-toggle="modal">
-                                                            <img src="/dashboard/assets/images/logos/pencil.png" width="20" alt="">
-                                                        </button>
-                                                    </form>
-                                                </div>
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-0">
-                                                    {{ $singleNews->news }}
-                                                </h6>
-                                            </td>
+                                        <td class="border-bottom-0">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <form action="{{ route('news.update', $singleNews->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <button type="button" style="background-color: #ffff; border: none;"
+                                                        data-bs-target="#newsModal{{ $singleNews->id }}"
+                                                        data-bs-toggle="modal">
+                                                        <img src="/dashboard/assets/images/logos/pencil.png" width="20"
+                                                            alt="">
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">
+                                                {{ $singleNews->news }}
+                                            </h6>
+                                        </td>
                                     </tr>
                                     <div class="modal fade" id="newsModal{{ $singleNews->id }}" tabindex="-1"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -96,7 +98,9 @@
                                                 <form action="{{ route('news.update', $singleNews->id) }}" method="POST">
                                                     <div class="modal-body">
                                                         @csrf
-                                                        <input type="text" name="news" id="disabledTextInput" class="form-control" placeholder="Tambahkan berita" value="{{ $singleNews->news }}">
+                                                        <input type="text" name="news" id="disabledTextInput"
+                                                            class="form-control" placeholder="Tambahkan berita"
+                                                            value="{{ $singleNews->news }}">
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
