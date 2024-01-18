@@ -20,7 +20,7 @@
                         <form action="{{ route('story.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Foto</label>
+                                <label for="exampleInputPassword1" class="form-label">Cerita</label>
                                 <input type="file" name="story" id="disabledTextInput" class="form-control"></input>
                                 @error('story')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <h5 class="card-title mb-9 fw-semibold">Form Cerita</h5>
-                @if ($story != null)
+                @if ($story->isNotEmpty())
                     <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
@@ -66,9 +66,9 @@
                             </tbody>
                         </table>
                     </div>
-                @else
-                    <p>Tidak ada cerita tersedia.</p>
-                @endif
+                    @else
+                        <p>Tidak ada cerita tersedia.</p>
+                    @endif
             </div>
         </div>
     </div>

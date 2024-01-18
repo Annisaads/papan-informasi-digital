@@ -17,20 +17,19 @@
                                 <strong>Gagal!</strong> {{ session('error') }}
                             </div>
                         @endif
-                        <form action="{{ route('announcement.create') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('news.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Teks</label>
-                                <textarea name="announcement" type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan berita"
+                                <textarea name="news" type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan berita"
                                     rows="5"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>
-                {{-- @if ($announcement != null && count($announcement) > 0)
-                    <h5 class="card-title fw-semibold mb-4">Form Berita</h5>
-
+                <h5 class="card-title fw-semibold mb-4">Form Berita</h5>
+                @if ($news != null && count($news) > 0)
                     @if (session()->has('delete-success'))
                         <div class="alert alert-success alert-dismissible fade show mt-3">
                             <strong>Berhasil!</strong> {{ session('delete-success') }}
@@ -57,12 +56,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($announcement as $announcement)
+                                @foreach ($news as $news)
                                     <tr>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('announcement.delete', $announcement->id) }}"
-                                                    method="POST">
+                                                <form action="{{ route('news.delete', $news->id) }}" method="POST">
                                                     @csrf
                                                     @method('GET')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
@@ -74,8 +72,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
-                                                <form action="{{ route('announcement.update', $announcement->id) }}"
-                                                    method="POST">
+                                                <form action="{{ route('news.update', $news->id) }}" method="POST">
                                                     @csrf
                                                     @method('POST')
                                                     <button type="submit" style="background-color: #ffff; border: none;">
@@ -87,8 +84,8 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">
-                                                @if ($announcement)
-                                                    {{ $announcement->announcement }}
+                                                @if ($news)
+                                                    {{ $news->news }}
                                                 @endif
                                             </h6>
                                         </td>
@@ -97,7 +94,9 @@
                             </tbody>
                         </table>
                     </div>
-                @endif --}}
+                @else
+                    <p>Tidak ada pengumuman tersedia.</p>
+                @endif
             </div>
         </div>
     </div>

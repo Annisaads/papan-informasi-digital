@@ -70,4 +70,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/cerita/tambah-cerita', [StoryController::class,'create'])->name('story.create');
     Route::get('/dashboard-admin/cerita/hapus-foto/{id}', [StoryController::class,'delete'])->name('story.delete');
     Route::post('/dashboard-admin/refresh', [RefreshController::class,'update'])->name('refresh.update');
+    Route::post('/dashboard-admin/berita/tambah', [NewsController::class,'create'])->name('news.create');
+    Route::get('/dashboard-admin/berita/hapus-berita/{id}', [NewsController::class,'delete'])->name('news.delete');
+    Route::post('/dashboard-admin/berita/edit-berita{id}', [NewsController::class,'update'])->name('news.update');
+
 });
