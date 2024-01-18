@@ -116,7 +116,7 @@
                         </table>
                     </div>
                 @else
-                    <p>Tidak ada pengumuman tersedia.</p>
+                    <p>Tidak ada berita tersedia.</p>
                 @endif
             </div>
         </div>
