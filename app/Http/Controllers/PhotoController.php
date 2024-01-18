@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class PhotoController extends Controller
 {
     public function index(){
-        $photo = Photo::all();
+        $photo = Photo::orderBy('created_at', 'desc')->get();
         return view("dashboard.admin.photo", compact("photo"));
        }
 
@@ -26,7 +26,7 @@ class PhotoController extends Controller
         return redirect()->route('photo.index')->with('success','Foto berhasil disimpan');
     }
     public function delete(){
-        $photo = Photo::first();
+        $photo = Photo::latest()->first();
     if($photo) {
         Storage::disk('public')->delete($photo->photo);
         $photo->delete();

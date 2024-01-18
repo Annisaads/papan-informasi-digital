@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class VideoController extends Controller
 {
     public function index(){
-        $video = Video::latest()->first();
+        $video = Video::orderBy('created_at', 'desc')->get();
         return view("dashboard.admin.video", compact("video"));
     }
     public function create(Request $request){
@@ -28,8 +28,12 @@ class VideoController extends Controller
 
     public function delete(){
         $video = Video::latest()->first();
-        Storage::disk('public')->delete($video->video);
-        $video->delete();
-        return redirect()->route('video.index')->with('delete-success','Video berhasil dihapus');
+        if($video) {
+            Storage::disk('public')->delete($video->video);
+            $video->delete();
+            return redirect()->route('video.index')->with('delete-success','Video berhasil dihapus');
+        } else {
+            return redirect()->route('video.index')->with('delete-error','Tidak ada video untuk dihapus');
+        }
     }
 }

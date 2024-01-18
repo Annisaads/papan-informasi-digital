@@ -35,26 +35,37 @@
                     </div>
                 </div>
                 <h5 class="card-title mb-9 fw-semibold">Form Video</h5>
-                @if ($video != null)
-                    <div class="table-responsive">
+                @if ($video->isNotEmpty())
+                    <div class="table-responsive" style="max-height: 300px;">
                         <table class="table text-nowrap mb-0 align-middle">
                             <thead class="text-dark fs-4">
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="border-bottom-0" style="width: 5%;">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <a href="{{ route('video.delete') }}"
-                                                style="background-color: #ffff;border: none;">
-                                                <img src="/dashboard/assets/images/logos/trash.png" width="20"
-                                                    alt="">
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="border-bottom-0" style="width: 95%;">
-                                        <h6 class="fw-semibold mb-0">{{ $video != null ? $video->video : '' }}</h6>
-                                    </td>
-                                </tr>
+                                @foreach ($video as $video)
+                                    <tr>
+                                        <td class="border-bottom-0" style="width: 5%;">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <form action="{{ route('video.delete', $video->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('GET')
+                                                    <button type="submit" style="background-color: #ffff; border: none;">
+                                                        <img src="/dashboard/assets/images/logos/trash.png" width="20"
+                                                            alt="">
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <video width="120" controls loop autoplay muted>
+                                                <source src="{{ asset('storage') . '/' . $video->video }}" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </td>
+                                        <td class="border-bottom-0" style="width: 95%;">
+                                            <h6 class="fw-semibold mb-0">{{ $video->video }}</h6>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
