@@ -20,7 +20,7 @@
                         <form action="{{ route('news.create') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Teks</label>
+                                <label for="exampleInputPassword1" class="form-label">Berita</label>
                                 <textarea name="news" type="text" id="disabledTextInput" class="form-control" placeholder="Tambahkan berita"
                                     rows="5"></textarea>
                             </div>
