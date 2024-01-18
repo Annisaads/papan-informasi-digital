@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class StoryController extends Controller
 {
     public function index(){
-        $story = Story::all();
+        $story = Story::orderBy('created_at', 'desc')->get();
         return view("dashboard.admin.story", compact('story'));
     }
 
@@ -17,7 +17,7 @@ class StoryController extends Controller
         $request -> validate([
             'story'=> 'required|image|mimes:png,jpg,jpeg|max:10240'
         ]);
-        $story = "foto-". uniqid(). "." . $request->story->getClientOriginalExtension();
+        $story = "cerita-". uniqid(). "." . $request->story->getClientOriginalExtension();
         $path = "story/$story" ;
         Storage::disk("public")->put($path, file_get_contents($request->story));
         Story::create([
@@ -26,7 +26,7 @@ class StoryController extends Controller
         return redirect()->route('story.index')->with('success','Cerita berhasil disimpan');
     }
     public function delete(){
-        $story = Story::first();
+        $story = Story::latest()->first();
     if($story) {
         Storage::disk('public')->delete($story->story);
         $story->delete();
