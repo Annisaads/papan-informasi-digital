@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function index(){
-        $news = News::latest()->first();
+        $news = News::all();
         return view("dashboard.admin.news", compact("news"));
     }
 
@@ -28,12 +28,19 @@ class NewsController extends Controller
         return redirect()->route('news.index')->with('delete-success','Berita berhasil dihapus');
     }
 
-    public function update(Request $request){
-        $news = News::latest()->first();
-        $news->update([
-            'news'=> $request->news
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'news' => 'required',
         ]);
-        return redirect()->route('news.index')->with('update-success','Berita berhasil diedit');
+
+        $news = News::findOrFail($id);
+
+        $news->update([
+            'news' => $request->input('news'),
+        ]);
+
+        return redirect()->route('news.index')->with('update-success', 'Berita berhasil diperbarui');
     }
 }
 
