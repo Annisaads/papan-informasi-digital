@@ -21,11 +21,15 @@ class NewsController extends Controller
         return redirect()->route('news.index')->with('success','Berita berhasil disimpan');
     }
 
-    public function delete(){
-        $news = News::latest()->first();
-        $news->delete();
+    public function delete($id){
+        $news = News::find($id);
 
-        return redirect()->route('news.index')->with('delete-success','Berita berhasil dihapus');
+        if($news) {
+            $news->delete();
+            return redirect()->route('news.index')->with('delete-success','Pengumuman berhasil dihapus');
+        } else {
+            return redirect()->route('news.index')->with('delete-error','Pengumuman tidak ditemukan');
+        }
     }
 
     public function update(Request $request, $id)

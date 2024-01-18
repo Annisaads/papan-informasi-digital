@@ -21,11 +21,15 @@ class AnnouncementController extends Controller
         return redirect()->route('announcement.index')->with('success','Pengumuman berhasil disimpan');
     }
 
-    public function delete(){
-        $announcement = Announcement::latest()->first();
-        $announcement->delete();
+    public function delete($id){
+        $announcement = Announcement::find($id);
 
-        return redirect()->route('announcement.index')->with('delete-success','Pengumuman berhasil dihapus');
+        if($announcement) {
+            $announcement->delete();
+            return redirect()->route('announcement.index')->with('delete-success','Pengumuman berhasil dihapus');
+        } else {
+            return redirect()->route('announcement.index')->with('delete-error','Pengumuman tidak ditemukan');
+        }
     }
 
     public function update(Request $request){
