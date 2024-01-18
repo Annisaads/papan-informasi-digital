@@ -3,7 +3,7 @@
 .div {
     display: flex;
     width: auto;
-    height: auto;
+    height: 800px;
     padding: 18px;
     flex-direction: column;
     justify-content: center;
