@@ -79,8 +79,8 @@ window.onload = function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     let slideIndex = 0;
-    const slides = document.querySelectorAll(".mySlides");
-    const frame = document.querySelector(".slide-frame");
+    const slides = document.querySelectorAll(".photoSlides");
+    const frame = document.querySelector(".slide-photo-frame");
 
     function showSlides() {
       frame.style.transition = "transform 1s ease";
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
       frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
 
       if (slideIndex >= slides.length) {
-        // Langsung lanjut ke slide pertama tanpa transisi
+
         frame.style.transition = "none";
         frame.style.transform = "translateX(0)";
         slideIndex = 0;
@@ -99,6 +99,33 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       setTimeout(showSlides, 2500);
+    }
+
+    showSlides();
+  });
+
+document.addEventListener("DOMContentLoaded", function() {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".storySlides");
+    const frame = document.querySelector(".slide-story-frame");
+
+    function showSlides() {
+      frame.style.transition = "transform 1s ease";
+      slideIndex++;
+
+      frame.style.transform = "translateX(-" + slideIndex * 100 + "%)";
+
+      if (slideIndex >= slides.length) {
+
+        frame.style.transition = "none";
+        frame.style.transform = "translateX(0)";
+        slideIndex = 0;
+        setTimeout(() => {
+          frame.style.transition = "transform 1s ease";
+        }, 0);
+      }
+
+      setTimeout(showSlides, 5000);
     }
 
     showSlides();

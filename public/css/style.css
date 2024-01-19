@@ -698,17 +698,32 @@ isi
     color: rgba(0, 73, 28, 1);
 }
 
-.slideshow-container {
+.slideshow-photo-container {
     max-width: auto;
     overflow: hidden;
 }
 
-.slide-frame {
+.slide-photo-frame {
     display: flex;
     transition: transform 1s ease;
 }
 
-.mySlides {
+.photoSlides {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slideshow-story-container {
+    max-width: auto;
+    overflow: hidden;
+}
+
+.slide-story-frame {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.storySlides {
     flex: 0 0 100%;
     box-sizing: border-box;
 }

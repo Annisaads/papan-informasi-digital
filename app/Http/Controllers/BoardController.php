@@ -8,6 +8,7 @@ use App\Models\Video;
 use App\Models\Profile;
 use App\Models\Refresh;
 use App\Models\Announcement;
+use App\Models\Story;
 use Illuminate\Http\Request;
 
 class BoardController extends Controller
@@ -19,7 +20,8 @@ class BoardController extends Controller
         $video = Video::latest()->first();
         $announcements= Announcement::latest()->get();
         $refresh = Refresh::where('is_selected', 1)->first();
-        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcements', 'refresh'));
+        $story = Story::all();
+        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcements', 'refresh', 'story'));
     }
 
 }

@@ -22,8 +22,22 @@
                         <div class="div-11">
                             <div class="div-12">
                                 <div class="column-2">
-                                    <img src="{{ asset('img/cerita-1.jpg') }}" class="div-13">
-                                    </img>
+                                    <div id="slideshow-story-container" class="slideshow-story-container">
+                                        <div class="slide-story-frame">
+                                            @forelse ($story as $story)
+                                                <div class="storySlides">
+                                                    <img loading="lazy"
+                                                        src="{{ asset('storage') . '/' . $story->story }}"
+                                                        class="img-3" />
+                                                </div>
+                                            @empty
+                                                <div class="storySlides">
+                                                    <img loading="lazy" src="{{ asset('img/cerita-1.jpg') }}"
+                                                        class="img-3" />
+                                                </div>
+                                            @endforelse
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="column-3">
@@ -51,16 +65,16 @@
                                                 Maaf, browser Anda tidak mendukung tag video.
                                             </video>
                                         @endif
-                                        <div class="slideshow-container">
-                                            <div class="slide-frame">
+                                        <div class="slideshow-photo-container">
+                                            <div class="slide-photo-frame">
                                                 @forelse ($photo as $photo)
-                                                    <div class="mySlides">
+                                                    <div class="photoSlides">
                                                         <img loading="lazy"
                                                             src="{{ asset('storage') . '/' . $photo->photo }}"
                                                             class="img-3" />
                                                     </div>
                                                 @empty
-                                                    <div class="mySlides">
+                                                    <div class="photoSlides">
                                                         <img loading="lazy"
                                                             src="{{ asset('img/Banner-Bersatu-Lebih-Kuat.jpg') }}"
                                                             class="img-3" />
