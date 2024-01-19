@@ -41,7 +41,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="text" name="social_media" id="disabledTextInput" class="form-control"
+                                <input type="password" name="social_media" id="disabledTextInput" class="form-control"
                                     placeholder=""></input>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
