@@ -19,11 +19,11 @@ class BoardController extends Controller
         $quote = Quote::latest()->first();
         $profile = Profile::latest()->first();
         $video = Video::latest()->first();
-        $announcements= Announcement::latest()->get();
+        $announcement= Announcement::latest()->get();
         $refresh = Refresh::where('is_selected', 1)->first();
         $story = Story::all();
         $news = News::all();
-        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcements', 'refresh', 'story', 'news'));
+        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcement', 'refresh', 'story', 'news'));
     }
 
 }

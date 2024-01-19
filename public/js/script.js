@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 0);
       }
 
-      setTimeout(showSlides, 2500);
+      setTimeout(showSlides, 5000);
     }
 
     showSlides();
@@ -130,9 +130,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     showSlides();
   });
-
-
-
 
 
 

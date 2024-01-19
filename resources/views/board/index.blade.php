@@ -105,47 +105,16 @@
                     <div class="div-41">
                         <div class="div-43">Pengumuman</div>
                         <div class="column-5">
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
+                            <div class="announcement-contents">
+                                @foreach ($announcement as $announcement)
+                                <div class="div-42">
+                                    <div class="div-44">
+                                        {{ $announcement->announcement }}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                </div>
-                            </div>
-                            <div class="div-42">
-                                <div class="div-44">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore Ut enim ad minim veniam, quis nostrud exercitation
-                                </div>
+                                @endforeach
                             </div>
                         </div>
-
 
                         <div class="div-52">
                             <iframe id="tradingview-widget"
@@ -188,7 +157,7 @@
                     announcementContents.scrollTop = 0;
                 }
 
-                setTimeout(autoScroll, 80);
+                setTimeout(autoScroll, 150);
             }
 
             autoScroll();

@@ -85,9 +85,7 @@
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">
-                                                @if ($announcement)
-                                                    {{ $announcement->announcement }}
-                                                @endif
+                                                {{ $announcement->announcement }}
                                             </h6>
                                         </td>
                                     </tr>
@@ -104,7 +102,7 @@
                                                 <form action="{{ route('announcement.update', $announcement->id) }}" method="POST">
                                                     <div class="modal-body">
                                                         @csrf
-                                                        <input type="text" name="announcement" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" value="{{ $announcement->news }}">
+                                                        <input type="text" name="announcement" id="disabledTextInput" class="form-control" placeholder="Tambahkan pengumuman" value="{{ $announcement->announcement }}">
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
