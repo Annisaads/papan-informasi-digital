@@ -84,7 +84,14 @@
                                         </div>
                                         <div class="div-33">
                                             <div class="div-40">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dot</p>
+                                                <marquee behavior="scroll" direction="left" scrollamount="5">
+                                                    @foreach ($news as $index => $news)
+                                                        {{ $news->news }}
+                                                        @if ($index < $news->count() - 1)
+                                                            |
+                                                        @endif
+                                                    @endforeach
+                                                </marquee>
                                             </div>
                                         </div>
                                     </div>
