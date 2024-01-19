@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">Input Profil Perusahaan</h5>
+                <h5 class="card-title fw-semibold mb-4">Edit Profil Saya</h5>
                 <div class="card">
                     <div class="card-body">
                         @if (session()->has('success'))
@@ -25,30 +25,34 @@
                         <form action="{{ route('profile.create') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Deskripsi Singkat</label>
-                                <textarea type="text" name="description" id="disabledTextInput" class="form-control"
-                                    placeholder="Tambahkan deskripsi" rows="5"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Alamat Web</label>
+                                <label for="exampleInputPassword1" class="form-label">Nama</label>
                                 <input type="text" name="website_url" id="disabledTextInput" class="form-control"
-                                    placeholder="Tambahkan url website"></input>
+                                    placeholder=""></input>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Nomor Telepon</label>
+                                <label for="exampleInputPassword1" class="form-label">Email</label>
+                                <input type="text" name="website_url" id="disabledTextInput" class="form-control"
+                                    placeholder=""></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Username</label>
                                 <input type="text" name="phone_number" id="disabledTextInput" class="form-control"
-                                    placeholder="Tambahkan nomor telepon"></input>
+                                    placeholder=""></input>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Media Sosial</label>
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
                                 <input type="text" name="social_media" id="disabledTextInput" class="form-control"
-                                    placeholder="Tambahkan media sosial"></input>
+                                    placeholder=""></input>
                             </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </form>
                     </div>
                 </div>
-
+                <h5 class="card-title fw-semibold mb-4">Hapus Akun</h5>
+                <p class="fs-4 mb-1 fw-bold">Ingin menghapus akun?</p>
+                <a href="">
+                    <button type="button" class="btn btn-danger mt-3">Hapus</button>
+                </a>
                 @if ($profile != null)
                     <div class="mb-4">
                         <h5 class="card-title fw-semibold">Form Profil</h5>
