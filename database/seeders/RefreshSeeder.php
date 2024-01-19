@@ -15,17 +15,7 @@ class RefreshSeeder extends Seeder
     {
         DB::table('refreshes')->insert([
             'refresh' => 300,
-            'is_selected' => true,
         ]);
 
-        DB::table('refreshes')->insert([
-            'refresh' => 600,
-            'is_selected' => false,
-        ]);
-
-        DB::table('refreshes')->insert([
-            'refresh' => 900,
-            'is_selected' => false,
-        ]);
     }
 }

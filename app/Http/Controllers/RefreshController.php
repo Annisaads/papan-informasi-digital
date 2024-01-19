@@ -8,15 +8,16 @@ use Illuminate\Http\Request;
 class RefreshController extends Controller
 {
     public function index(){
-        $refreshes = Refresh::get();
-        return view("dashboard.admin.refresh", compact('refreshes'));
+        $refresh = Refresh::first();
+        return view("dashboard.admin.refresh", compact('refresh'));
     }
 
     public function update(Request $request){
-        $selected = $request->refresh;
-        Refresh::query()->update(['is_selected'=> false]);
-        Refresh::where('id', $selected)->update(['is_selected' => true]);
-
+        $refresh = Refresh::first();
+        $time = $request->refresh * 60;
+        $refresh->update([
+            'refresh' => $time
+        ]);
         return redirect()->route('refresh.index')->with('success','Waktu refresh berhasil disimpan');
     }
 }

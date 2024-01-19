@@ -20,7 +20,7 @@ class BoardController extends Controller
         $profile = Profile::latest()->first();
         $video = Video::latest()->first();
         $announcement= Announcement::latest()->get();
-        $refresh = Refresh::where('is_selected', 1)->first();
+        $refresh = Refresh::first();
         $story = Story::all();
         $news = News::all();
         return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcement', 'refresh', 'story', 'news'));
