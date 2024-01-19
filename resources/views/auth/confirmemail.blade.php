@@ -24,35 +24,28 @@
                                     <img src="{{ asset('dashboard/assets/images/logos/logo-ptsb.png') }}" width="180"
                                         alt="">
                                 </a>
-                                <p class="text-center">Kokoh dan Tahan Lamo</p>
+                                <p class="text-center mb-5">Kokoh dan Tahan Lamo</p>
                                 <form>
-                                    <div class="mb-3">
-                                        <label for="exampleInputtext1" class="form-label">Nama</label>
-                                        <input type="text" class="form-control" id="exampleInputtext1"
-                                            placeholder="Masukan Nama" aria-describedby="textHelp">
+                                    <div class="d-flex align-items-center justify-content-center">
+
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                                    <div class="mb-2">
                                         <input type="email" class="form-control" id="exampleInputEmail1"
                                             placeholder="Masukan Email" aria-describedby="emailHelp">
+
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleInputtext1" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="exampleInputtext1"
-                                            placeholder="Masukan Username" aria-describedby="textHelp">
+                                    <div class="mb-5">
+                                        <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Masukan alamat
+                                            email aktif, tautan untuk mengganti
+                                            kata sandi akan dikirim melalui email.</p>
                                     </div>
-                                    <div class="mb-4">
-                                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Masukan Password">
-                                    </div>
-                                    <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Daftar
+                                    <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Kirim
                                     </a>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <p class="fs-4 mb-0 fw-bold">Sudah punya akun?</p>
-                                        <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Masuk
+                                        <p class="fs-4 mb-0 fw-bold">Belum menerima email?</p>
+                                        <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Kirim
+                                            Ulang
                                         </a>
-                                    </div>
                                 </form>
                             </div>
                         </div>
