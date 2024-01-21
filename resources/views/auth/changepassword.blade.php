@@ -30,11 +30,17 @@
 
                                     </div>
                                     <div class="mb-2">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
                                         <input type="password" name="password" class="form-control"
                                             id="exampleInputPassword1" placeholder="Masukan Password Baru">
                                         @error('password')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
+                                        <input type="password" name="password-confirmation" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Masukan Konfirmasi Password Baru">
                                     </div>
                                     <div class="mb-5">
                                         <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Silahkan masukan

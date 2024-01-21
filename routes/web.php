@@ -9,7 +9,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\QouteController;
 use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\VideoController;
@@ -17,8 +16,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnouncementController;
-use App\Models\Refresh;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +31,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get("/", [BoardController::class,"index"]);
 Route::middleware('guest:admin')->group(function () {
-    Route::get("/login", [AuthController::class,"index"])->name('login.index');
+    Route::get("/login", [AuthController::class,"loginView"])->name('login.index');
     Route::post("/login", [AuthController::class,"login"])->name('login');
+    Route::get("/register", [AuthController::class,"registerView"])->name('register.index');
+    Route::post("/register", [AuthController::class,"register"])->name('register');
+
 });
 Route::middleware('auth:admin')->group(function () {
     Route::get("/logout", [AuthController::class,"logout"])->name('logout');
