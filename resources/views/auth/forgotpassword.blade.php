@@ -25,13 +25,29 @@
                                         alt="">
                                 </a>
                                 <p class="text-center mb-5">Kokoh dan Tahan Lamo</p>
-                                <form>
+                                @if (session()->has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mt-3">
+                                        <strong>Berhasil!</strong> {{ session('success') }}
+                                    </div>
+                                @endif
+                                @if (session()->has('error'))
+                                    <div class="alert alert-dager alert-dismissible fade show mt-3">
+                                        <strong>Gagal!</strong> {{ session('error') }}
+                                    </div>
+                                @endif
+                                <form action="{{ route('forgotpassword.send') }}" method="POST">
+                                    @csrf
                                     <div class="d-flex align-items-center justify-content-center">
 
                                     </div>
                                     <div class="mb-2">
                                         <input type="email" class="form-control" id="exampleInputEmail1"
-                                            placeholder="Masukan Email" aria-describedby="emailHelp">
+                                            name="email" placeholder="Masukan Email" aria-describedby="emailHelp">
+                                        @error('email')
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
 
                                     </div>
                                     <div class="mb-5">
@@ -39,8 +55,8 @@
                                             email aktif, tautan untuk mengganti
                                             kata sandi akan dikirim melalui email.</p>
                                     </div>
-                                    <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Kirim
-                                    </a>
+                                    <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Kirim
+                                    </button>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <p class="fs-4 mb-0 fw-bold">Belum menerima email?</p>
                                         <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Kirim

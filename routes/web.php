@@ -16,6 +16,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefreshController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\ForgotPasswordController;
 
 
 /*
@@ -35,6 +36,11 @@ Route::middleware('guest:admin')->group(function () {
     Route::post("/login", [AuthController::class,"login"])->name('login');
     Route::get("/register", [AuthController::class,"registerView"])->name('register.index');
     Route::post("/register", [AuthController::class,"register"])->name('register');
+    Route::get("/register", [AuthController::class,"registerView"])->name('register.index');
+    Route::get('/dashboard-admin/lupa-password', [ForgotPasswordController::class, 'index'])->name('forgotpassword.index');
+    Route::post('/dashboard-admin/lupa-password', [ForgotPasswordController::class, 'forgotPassword'])->name('forgotpassword.send');
+    Route::get('/reset-password', [ForgotPasswordController::class, 'resetPasswordView'])->name('resetPassword.index');
+    Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('resetPassword.reset');
 
 });
 Route::middleware('auth:admin')->group(function () {
@@ -48,12 +54,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
     Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
     Route::get('/dashboard-admin/refresh', [RefreshController::class, 'index'])->name('refresh.index');
-    Route::post('/dashboard-admin/profil/tambah', [ProfileController::class,'create'])->name('profile.create');
-    Route::get('/dashboard-admin/profil/hapus-profil', [ProfileController::class,'deleteProfile'])->name('profile.delete.profile');
-    Route::post('/dashboard-admin/profil/edit-deskripsi', [ProfileController::class,'updateDescription'])->name('profile.update.description');
-    Route::post('/dashboard-admin/profil/edit-alamat-web', [ProfileController::class,'updateWebsiteUrl'])->name('profile.update.website_url');
-    Route::post('/dashboard-admin/profil/edit-nomor-telepon', [ProfileController::class,'updatePhoneNumber'])->name('profile.update.phone_number');
-    Route::post('/dashboard-admin/profil/edit-sosial-media', [ProfileController::class,'updateSocialMedia'])->name('profile.update.social_media');
+    Route::post('/dashboard-admin/profil/edit-profil', [ProfileController::class,'update'])->name('profile.update');
     Route::post('/dashboard-admin/video/tambah', [VideoController::class,'create'])->name('video.create');
     Route::get('/dashboard-admin/profil/hapus-video', [VideoController::class,'delete'])->name('video.delete');
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
@@ -74,5 +75,6 @@ Route::middleware('auth:admin')->group(function () {
     Route::post('/dashboard-admin/berita/tambah', [NewsController::class,'create'])->name('news.create');
     Route::get('/dashboard-admin/berita/hapus-berita/{id}', [NewsController::class,'delete'])->name('news.delete');
     Route::post('/dashboard-admin/berita/edit-berita/{id}', [NewsController::class,'update'])->name('news.update');
+
 
 });

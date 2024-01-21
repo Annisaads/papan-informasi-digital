@@ -25,6 +25,11 @@
                                         alt="">
                                 </a>
                                 <p class="text-center">Kokoh dan Tahan Lamo</p>
+                                @if (session()->has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mt-3">
+                                        <strong>Berhasil!</strong> {{ session('success') }}
+                                    </div>
+                                @endif
                                 @if (session()->has('error'))
                                     <div class="alert alert-danger alert-dismissible fade show mt-3">
                                         <svg viewbox="0 0 24 24" width="24" height="24" stroke="currentColor"
@@ -61,7 +66,8 @@
                                         @enderror
                                     </div>
                                     <div class="mb-4" style="text-align: right">
-                                        <a class="text-primary fw-bold" href="./index.html">Lupa Password?</a>
+                                        <a class="text-primary fw-bold" href={{ route('forgotpassword.index') }}>Lupa
+                                            Password?</a>
                                     </div>
                                     <button type="submit"
                                         class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Masuk</button>

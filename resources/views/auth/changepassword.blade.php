@@ -20,26 +20,33 @@
                     <div class="col-md-8 col-lg-6 col-xxl-5">
                         <div class="card mb-0">
                             <div class="card-body">
-                                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                                <a href={{ route('forgotpassword.index') }} class="text-nowrap logo-img text-center d-block py-3 w-100">
                                     <img src="{{ asset('dashboard/assets/images/logos/logo-ptsb.png') }}" width="180"
                                         alt="">
                                 </a>
                                 <p class="text-center mb-5">Kokoh dan Tahan Lamo</p>
-                                <form>
-                                    <div class="d-flex align-items-center justify-content-center">
-
+                                <form action="{{ route('resetPassword.reset') }}" method="POST">
+                                    @csrf
+                                    @if (session()->has('success'))
+                                    <div class="alert alert-success alert-dismissible fade show mt-3">
+                                        <strong>Berhasil!</strong> {{ session('success') }}
                                     </div>
+                                @endif
+                                @if (session()->has('error'))
+                                    <div class="alert alert-dager alert-dismissible fade show mt-3">
+                                        <strong>Gagal!</strong> {{ session('error') }}
+                                    </div>
+                                @endif
+                                    <input type="hidden" name="token" value="{{ request()->get('token') }}">
+                                    <input type="hidden" name="email" value="{{ request()->get('email') }}">
                                     <div class="mb-2">
                                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control"
+                                        <input type="password" name="new_password" class="form-control"
                                             id="exampleInputPassword1" placeholder="Masukan Password Baru">
-                                        @error('password')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
                                     </div>
                                     <div class="mb-4">
                                         <label for="exampleInputPassword1" class="form-label">Konfirmasi Password</label>
-                                        <input type="password" name="password-confirmation" class="form-control" id="exampleInputPassword1"
+                                        <input type="password" name="new_password_confirmation" class="form-control" id="exampleInputPassword1"
                                             placeholder="Masukan Konfirmasi Password Baru">
                                     </div>
                                     <div class="mb-5">
@@ -47,8 +54,8 @@
                                             password
                                             baru Anda.</p>
                                     </div>
-                                    <a href="./index.html" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Simpan
-                                    </a>
+                                    <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Simpan
+                                    </button>
                                 </form>
                             </div>
                         </div>
