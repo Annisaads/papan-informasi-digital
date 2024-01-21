@@ -55,7 +55,10 @@
                                             email aktif, tautan untuk mengganti
                                             kata sandi akan dikirim melalui email.</p>
                                     </div>
-                                    <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Kirim
+                                    <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-3 rounded-2">Kirim
+                                    </button>
+                                    <button type="button"
+                                        class="btn btn-outline-primary w-100 py-8 fs-4 mb-4 rounded-2">Batal
                                     </button>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <p class="fs-4 mb-0 fw-bold">Belum menerima email?</p>
