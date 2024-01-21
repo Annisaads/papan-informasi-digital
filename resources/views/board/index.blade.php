@@ -32,7 +32,7 @@
                                                 </div>
                                             @empty
                                                 <div class="storySlides">
-                                                    <img loading="lazy" src="{{ asset('img/cerita-1.jpg') }}"
+                                                    <img loading="lazy" src="{{ asset('img/cerita-ptsb.jpg') }}"
                                                         class="img-3" />
                                                 </div>
                                             @endforelse
