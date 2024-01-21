@@ -5,7 +5,7 @@
             <a href="./index.html" class="text-nowrap logo-img">
                 <img src="{{ asset('dashboard/assets/images/logos/logo-ptsb.png') }}" width="200" alt="" />
             </a>
-            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer mx-lg-3 mt-lg-1" id="sidebarCollapse">
                 <i class="ti ti-x fs-8"></i>
             </div>
         </div>
