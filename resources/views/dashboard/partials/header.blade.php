@@ -30,14 +30,6 @@
                         Tbk</p>
                 </li>
             </ul>
-
-            {{-- <div class="my-1">
-                <h5 class="mb-1 fw-semibold mt-1">Padimen</h5>
-                <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Panel Informasi Elektronik PT Semen
-                    Baturaja
-                    Tbk</p>
-            </div> --}}
-
             <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                 <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                     <li class="nav-item">

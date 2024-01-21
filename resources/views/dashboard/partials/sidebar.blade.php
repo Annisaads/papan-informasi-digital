@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="./index.html" class="text-nowrap logo-img">
+            <a class="text-nowrap logo-img">
                 <img src="{{ asset('dashboard/assets/images/logos/logo-ptsb.png') }}" width="200" alt="" />
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer mx-lg-3 mt-lg-1" id="sidebarCollapse">
@@ -68,14 +68,6 @@
                         <span class="hide-menu">Berita</span>
                     </a>
                 </li>
-
-                {{-- <li class="nav-small-cap">
-                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                    <span class="hide-menu"></span>
-                </li>
-                <li class="sidebar-item">
-                    <a href="{{ route('logout') }}" class="btn btn-outline-primary mx-3 mt-2 d-block">Keluar</a>
-                </li> --}}
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
