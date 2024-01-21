@@ -51,9 +51,10 @@
                                         <div class="div-3"></div>
                                     </div>
                                     <div class="div-32">
-                                        @if ($video != null)
-                                            <video id="vid" class="img-2" controls loop autoplay muted>
-                                                <source src="{{ asset('storage') . '/' . $video->video }}"
+                                        @if ($videos != null)
+                                            <video id="myVideo" class="img-2" controls autoplay muted
+                                                onended="playNextVideo()">
+                                                <source src="{{ asset('storage') . '/' . $videos[0]->video }}"
                                                     type="video/mp4">
                                                 Maaf, browser Anda tidak mendukung tag video.
                                             </video>
@@ -162,6 +163,20 @@
 
             autoScroll();
         });
+
+        const videos = [
+            @foreach ($videos as $video)
+                "{{ asset('storage') . '/' . $video->video }}",
+            @endforeach
+        ];
+
+        let currentVideoIndex = 0;
+
+        function playNextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            document.getElementById("myVideo").src = videos[currentVideoIndex];
+            document.getElementById("myVideo").play();
+        }
     </script>
 </body>
 

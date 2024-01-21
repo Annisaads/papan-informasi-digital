@@ -16,14 +16,13 @@ class BoardController extends Controller
 {
     public function index(){
         $photo = Photo::all();
-        $quote = Quote::latest()->first();
         $profile = Profile::latest()->first();
-        $video = Video::latest()->first();
+        $videos = Video::latest()->get();
         $announcement= Announcement::latest()->get();
         $refresh = Refresh::first();
         $story = Story::all();
         $news = News::all();
-        return view('board.index', compact('profile', 'video', 'quote', 'photo', 'announcement', 'refresh', 'story', 'news'));
+        return view('board.index', compact('profile', 'videos',  'photo', 'announcement', 'refresh', 'story', 'news'));
     }
 
 }
