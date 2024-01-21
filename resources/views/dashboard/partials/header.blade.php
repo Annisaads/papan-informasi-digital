@@ -17,12 +17,26 @@
 <body onload="tampilkanTanggal()">
     <header class="app-header" style="border-style: groove; border-width: 0px 0px 3px 0px; border-color: #5d87ff;">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="my-1">
+            <ul class="navbar-nav">
+                <li class="nav-item d-block d-xl-none">
+                    <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                        <i class="ti ti-menu-2"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <h5 class="mb-1 fw-semibold mt-1">Padimen</h5>
+                    <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Panel Informasi Elektronik PT Semen
+                        Baturaja
+                        Tbk</p>
+                </li>
+            </ul>
+
+            {{-- <div class="my-1">
                 <h5 class="mb-1 fw-semibold mt-1">Padimen</h5>
                 <p class="fw-lighter fst-italic mb-1" style="font-size: 12px;">Panel Informasi Elektronik PT Semen
                     Baturaja
                     Tbk</p>
-            </div>
+            </div> --}}
 
             <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                 <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">

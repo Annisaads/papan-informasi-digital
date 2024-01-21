@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="shortcut icon" type="image/png"
         href="{{ asset('dashboard/assets/images/logos/logo-ptsb-kecil.png') }}" />
-    <title>Papan Informasi Digital PT Semen Baturaja Tbk</title>
+    <title>PT Semen Baturaja Tbk</title>
     <script src="{{ asset('js/script.js') }}"></script>
 </head>
 
@@ -107,11 +107,11 @@
                         <div class="column-5">
                             <div class="announcement-contents">
                                 @foreach ($announcement as $announcement)
-                                <div class="div-42">
-                                    <div class="div-44">
-                                        {{ $announcement->announcement }}
+                                    <div class="div-42">
+                                        <div class="div-44">
+                                            {{ $announcement->announcement }}
+                                        </div>
                                     </div>
-                                </div>
                                 @endforeach
                             </div>
                         </div>
