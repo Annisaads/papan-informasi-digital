@@ -40,7 +40,7 @@
                     <!-- Berita -->
                     <div class="card-body p-2">
                         <h5 class="card-title mb-9 fw-semibold" style="color: #5d87ff;"><a
-                                href="{{ route('quote.index') }}">Berita</a></h5>
+                                href="{{ route('news.index') }}">Berita</a></h5>
                         <div class="card">
                             <div class="card-header">
                                 Jumlah Berita
