@@ -63,9 +63,11 @@
                 </div>
                 <h5 class="card-title fw-semibold mb-4">Hapus Akun</h5>
                 <p class="fs-4 mb-1 fw-bold">Ingin menghapus akun?</p>
-                <a href="">
-                    <button type="button" class="btn btn-danger mt-3">Hapus</button>
-                </a>
+                <form action="{{route('profile.delete')}}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" onclick="return confirm('Apakah anda yakin akan menghapus akun?')" class="btn btn-danger mt-3">Hapus</button>
+                </form>
             </div>
         </div>
     </div>

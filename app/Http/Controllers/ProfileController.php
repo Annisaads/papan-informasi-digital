@@ -28,5 +28,13 @@ class ProfileController extends Controller
             'username' => $request->username,
         ]);
         return redirect()->route('profile.index')->with('success','Profil berhasil diedit');
+    }
+
+    public function delete(Request $request){
+        $admin = Auth::guard('admin')->user();
+        Admin::where('id', $admin->id)->delete();
+
+        return redirect()->route('login.index')->with('success','Akun berhasil dihapus');
+    }
 }
-}
+
