@@ -58,7 +58,8 @@
                                     <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-3 rounded-2">Kirim
                                     </button>
                                     <button type="button"
-                                        class="btn btn-outline-primary w-100 py-8 fs-4 mb-4 rounded-2">Batal
+                                        class="btn btn-outline-primary w-100 py-8 fs-4 mb-4 rounded-2"
+                                        onclick="batal()">Batal
                                     </button>
                                     <div class="d-flex align-items-center justify-content-center">
                                         <p class="fs-4 mb-0 fw-bold">Belum menerima email?</p>
@@ -75,6 +76,12 @@
     </div>
     <script src="{{ asset('dashboard/assets/libs/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('dashboard/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+        function batal() {
+            window.location.href = '{{ route('login') }}';
+            alert("Kembali ke halaman masuk.");
+        }
+    </script>
 </body>
 
 </html>

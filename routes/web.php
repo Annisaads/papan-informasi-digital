@@ -50,7 +50,6 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
     Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
     Route::get('/dashboard-admin/pengumuman', [AnnouncementController::class, 'index'])->name('announcement.index');
-    Route::get('/dashboard-admin/pesan-tokoh', [QuoteController::class, 'index'])->name('quote.index');
     Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
     Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
     Route::get('/dashboard-admin/refresh', [RefreshController::class, 'index'])->name('refresh.index');
@@ -59,16 +58,9 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/dashboard-admin/profil/hapus-video', [VideoController::class,'delete'])->name('video.delete');
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
     Route::get('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class,'delete'])->name('photo.delete');
-    Route::post('/dashboard-admin/pesan-tokoh/tambah', [QuoteController::class,'create'])->name('quote.create');
-    Route::get('/dashboard-admin/pesan-tokoh/hapus-pesan-tokoh', [QuoteController::class,'delete'])->name('quote.delete');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh/{id}', [QuoteController::class,'update'])->name('quote.update');
     Route::post('/dashboard-admin/pengumuman/tambah', [AnnouncementController::class,'create'])->name('announcement.create');
     Route::get('/dashboard-admin/pengumuman/hapus-pengumuman/{id}', [AnnouncementController::class,'delete'])->name('announcement.delete');
     Route::post('/dashboard-admin/pengumuman/edit-pengumuman/{id}', [AnnouncementController::class,'update'])->name('announcement.update');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-foto-tokoh', [QuoteController::class,'updatePhoto'])->name('quote.update.photo');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-nama-tokoh', [QuoteController::class,'updateName'])->name('quote.update.name');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-jabatan-tokoh', [QuoteController::class,'updatePosition'])->name('quote.update.position');
-    Route::post('/dashboard-admin/pesan-tokoh/edit-pesan-tokoh', [QuoteController::class,'updateQoute'])->name('quote.update.quote');
     Route::post('/dashboard-admin/cerita/tambah-cerita', [StoryController::class,'create'])->name('story.create');
     Route::get('/dashboard-admin/cerita/hapus-foto/{id}', [StoryController::class,'delete'])->name('story.delete');
     Route::post('/dashboard-admin/refresh', [RefreshController::class,'update'])->name('refresh.update');
