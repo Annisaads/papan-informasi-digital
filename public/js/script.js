@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 0);
       }
 
-      setTimeout(showSlides, 5000);
+      setTimeout(showSlides, 10000);
     }
 
     showSlides();
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 0);
       }
 
-      setTimeout(showSlides, 5000);
+      setTimeout(showSlides, 10000);
     }
 
     showSlides();
