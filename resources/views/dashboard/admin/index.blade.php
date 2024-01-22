@@ -75,7 +75,7 @@
             <div class="card overflow-hidden rounded-2" style="border: 1px solid #5d87ff">
                 <div class="card-body">
                     <h5 class="card-title fw-semibold" style="color: #5d87ff;">
-                        <a href="{{ route('profile.index') }}">Cerita</a>
+                        <a href="{{ route('story.index') }}">Cerita</a>
                     </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Jumlah Cerita</h6>
                     <div class="card-body">
