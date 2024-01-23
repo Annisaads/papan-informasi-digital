@@ -44,29 +44,50 @@ Route::middleware('guest:admin')->group(function () {
 
 });
 Route::middleware('auth:admin')->group(function () {
+    // logout
     Route::get("/logout", [AuthController::class,"logout"])->name('logout');
+
+    // dashboard
     Route::get('/dashboard-admin', [DashboardController::class, 'index'])->name('dashboard.index');
+
+    // profile
     Route::get('/dashboard-admin/profil', [ProfileController::class, 'index'])->name('profile.index');
-    Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
-    Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
-    Route::get('/dashboard-admin/pengumuman', [AnnouncementController::class, 'index'])->name('announcement.index');
-    Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
-    Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
-    Route::get('/dashboard-admin/refresh', [RefreshController::class, 'index'])->name('refresh.index');
     Route::post('/dashboard-admin/profil/edit-profil', [ProfileController::class,'update'])->name('profile.update');
+    Route::delete('/dashboard-admin/hapus-akun', [ProfileController::class,'delete'])->name('profile.delete' );
+
+    // video
+    Route::get('/dashboard-admin/video', [VideoController::class, 'index'])->name('video.index');
     Route::post('/dashboard-admin/video/tambah', [VideoController::class,'create'])->name('video.create');
     Route::get('/dashboard-admin/profil/hapus-video', [VideoController::class,'delete'])->name('video.delete');
+
+
+    // photo
+    Route::get('/dashboard-admin/foto', [PhotoController::class, 'index'])->name('photo.index');
     Route::post('/dashboard-admin/foto/tambah', [PhotoController::class,'create'])->name('photo.create');
     Route::get('/dashboard-admin/foto/hapus-foto/{id}', [PhotoController::class,'delete'])->name('photo.delete');
+
+
+    // announcement
+    Route::get('/dashboard-admin/pengumuman', [AnnouncementController::class, 'index'])->name('announcement.index');
     Route::post('/dashboard-admin/pengumuman/tambah', [AnnouncementController::class,'create'])->name('announcement.create');
     Route::get('/dashboard-admin/pengumuman/hapus-pengumuman/{id}', [AnnouncementController::class,'delete'])->name('announcement.delete');
     Route::post('/dashboard-admin/pengumuman/edit-pengumuman/{id}', [AnnouncementController::class,'update'])->name('announcement.update');
+
+    // story
+    Route::get('/dashboard-admin/cerita', [StoryController::class, 'index'])->name('story.index');
     Route::post('/dashboard-admin/cerita/tambah-cerita', [StoryController::class,'create'])->name('story.create');
     Route::get('/dashboard-admin/cerita/hapus-foto/{id}', [StoryController::class,'delete'])->name('story.delete');
-    Route::post('/dashboard-admin/refresh', [RefreshController::class,'update'])->name('refresh.update');
+
+
+    // news
+    Route::get('/dashboard-admin/berita', [NewsController::class, 'index'])->name('news.index');
     Route::post('/dashboard-admin/berita/tambah', [NewsController::class,'create'])->name('news.create');
     Route::get('/dashboard-admin/berita/hapus-berita/{id}', [NewsController::class,'delete'])->name('news.delete');
     Route::post('/dashboard-admin/berita/edit-berita/{id}', [NewsController::class,'update'])->name('news.update');
-    Route::delete('/dashboard-admin/hapus-akun', [ProfileController::class,'delete'])->name('profile.delete' );
+
+
+    // refresh
+    Route::get('/dashboard-admin/refresh', [RefreshController::class, 'index'])->name('refresh.index');
+    Route::post('/dashboard-admin/refresh', [RefreshController::class,'update'])->name('refresh.update');
 
 });
