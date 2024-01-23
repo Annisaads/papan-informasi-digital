@@ -1,15 +1,10 @@
 <?php
 
-use App\Models\Qoute;
-use App\Models\Video;
-use App\Models\Message;
-use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\QuoteController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ProfileController;
