@@ -27,13 +27,20 @@ use App\Http\Controllers\ForgotPasswordController;
 
 Route::get("/", [BoardController::class,"index"]);
 Route::middleware('guest:admin')->group(function () {
+    // login
     Route::get("/login", [AuthController::class,"loginView"])->name('login.index');
     Route::post("/login", [AuthController::class,"login"])->name('login');
+
+    // register
     Route::get("/register", [AuthController::class,"registerView"])->name('register.index');
     Route::post("/register", [AuthController::class,"register"])->name('register');
     Route::get("/register", [AuthController::class,"registerView"])->name('register.index');
+
+    // lupa password
     Route::get('/dashboard-admin/lupa-password', [ForgotPasswordController::class, 'index'])->name('forgotpassword.index');
     Route::post('/dashboard-admin/lupa-password', [ForgotPasswordController::class, 'forgotPassword'])->name('forgotpassword.send');
+
+    // reset password
     Route::get('/reset-password', [ForgotPasswordController::class, 'resetPasswordView'])->name('resetPassword.index');
     Route::post('/reset-password', [ForgotPasswordController::class, 'resetPassword'])->name('resetPassword.reset');
 
