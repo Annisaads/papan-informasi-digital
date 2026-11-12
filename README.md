@@ -24,9 +24,9 @@ Laravel 10 · PHP 8.1–8.2 · MySQL · HTML, CSS, JavaScript
 
 ## Peran
 
-Dikembangkan oleh **Annisa Dwi Septiani** selama magang sebagai **Web Developer** di ICT Solution & Application Department, PT Semen Baturaja Tbk (Desember 2023 – Januari 2024):
+Dikembangkan bersama tim selama magang di ICT Solution & Application Department, PT Semen Baturaja Tbk (Desember 2023 – Januari 2024). Peran **Annisa Dwi Septiani** sebagai **Web Developer**:
 
-- Mengembangkan Sistem Panel Informasi Elektronik berbasis website, dari perancangan antarmuka (UI) hingga back end.
+- Mengembangkan Sistem Panel Informasi Elektronik berbasis website bersama tim, dari perancangan antarmuka (UI) hingga back end.
 - Berkolaborasi dengan tim dalam penyempurnaan sistem berbasis website.
 
 ## Persyaratan
